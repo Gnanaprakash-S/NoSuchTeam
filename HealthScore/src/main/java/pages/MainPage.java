@@ -1,5 +1,6 @@
 package pages;
 
-public class MainPage {
+public class MainPage 
+{
 
 }
