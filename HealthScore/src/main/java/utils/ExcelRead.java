@@ -17,12 +17,12 @@ public class ExcelRead {
 	public String [][] data;
 	public String filename;
 	public String sheetName;
+	public ExcelRead() {}
 	
 	//Constructor
 	public ExcelRead(String filename, String sheetName) {
 		this.filename = filename;
 		this.sheetName=sheetName;
-		
 	}
 	
 	//Reading Excel Sheet
