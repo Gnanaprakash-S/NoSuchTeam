@@ -37,6 +37,45 @@ public class TestScripts extends BaseTest{
 	@Test(priority=0,dataProvider="filereader",dataProviderClass="utils.ExcelRead")
 	public void nameField()
 	{
+=======
+import pages.MainPage;
+
+
+public class TestScripts 
+{
+
+	  WebDriver driver;
+    MainPage mainPage;
+
+    @BeforeTest
+    @Parameters("browser")
+    public void setUp(String browser) {
+    	if(browser.equalsIgnoreCase("chrome")) {
+    		driver = new ChromeDriver();
+    	}else if(browser.equalsIgnoreCase("edge")) {
+    		driver = new EdgeDriver();
+    	}
+        driver.manage().window().maximize();
+        driver.get("https://yalanuwu.github.io/Health-Index-Calculator/");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
+      
+        mainPage = new MainPage(driver);
+    }
+    
+
+    @AfterTest
+    public void closing() {
+        //driver.quit();
+        System.out.println("Test completed and browser closed.");
+    }
+
+	@Test
+	public void Hello()
+	{
+		System.out.println("Hello Team");
+		System.out.println("Bilal request");
+		System.out.println("deva request");
 		
 	}
 	
