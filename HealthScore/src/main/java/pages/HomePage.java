@@ -9,7 +9,7 @@ public class HomePage {
 	
 	WebDriver driver;
 	
-	@FindBy()
+	@FindBy(id="name")
 	WebElement name;
 	
 	public HomePage(WebDriver driver) {
@@ -18,8 +18,8 @@ public class HomePage {
     }
     
 
-    public void nameField() {
-    	
+    public void nameField(String input) {
+    	name.sendKeys(input);
     }
 
 }
