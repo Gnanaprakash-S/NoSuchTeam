@@ -8,7 +8,7 @@
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="setUpPagesAndUtils"/>
-          <include name="validateAge"/>
+          <include name="validateName"/>
         </methods>
       </class> <!-- tests.TestScripts -->
     </classes>
