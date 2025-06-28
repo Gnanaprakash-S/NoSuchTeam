@@ -39,11 +39,8 @@ public class HomePage {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
     	Boolean isValid = (Boolean) js.executeScript("return arguments[0].checkValidity();", element);
     	
-    	if(!isValid)
-    		Assert.assertTrue(isValid,"Invalid input was accepted for value : "+value);
-    	
-    	else
-    		System.out.println("Valid input for value : "+value);
+    	Assert.assertFalse(isValid,"Invalid input was accepted for value : "+value);
+    	System.out.println("Valid input for value : "+value);
 	}
 
     public void nameField(String input) {

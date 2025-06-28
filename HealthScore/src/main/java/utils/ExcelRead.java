@@ -14,39 +14,51 @@ import org.testng.annotations.DataProvider;
 public class ExcelRead {
 	
 	//Data Members
-	public String [][] data;
-	public String filename;
-	public String sheetName;
-	public ExcelRead() {}
+	public static String [][] data;
+	public static String filename;
+	public static String sheetName;
 	
 	//Constructor
 	public ExcelRead(String filename, String sheetName) {
-		this.filename = filename;
-		this.sheetName=sheetName;
+		ExcelRead.filename = filename;
+		ExcelRead.sheetName=sheetName;
 	}
 	
 	//Reading Excel Sheet
-	public String [][] readExcelOperation() throws FileNotFoundException, IOException{
+	public static String [][] readExcelOperation() throws FileNotFoundException, IOException{
 		XSSFWorkbook book = new XSSFWorkbook(new FileInputStream(filename));
 		XSSFSheet sheet = book.getSheet(sheetName);
-		int col_num = sheet.getRow(0).getLastCellNum();
-		int row_num = sheet.getLastRowNum();
-		data = new String[row_num][col_num];
 		DataFormatter format = new DataFormatter();
-		for(int i = 1;i<= row_num;i++) {
+		int start_Row=2;
+		int col_num = sheet.getRow(2).getLastCellNum();
+		int row_num = sheet.getLastRowNum();
+		
+		int dataRowCount = 0;
+		
+	    for (int i = start_Row; i <= row_num; i++) {
+	        if (sheet.getRow(i) != null) dataRowCount++;
+	    }
+	    
+		data = new String[dataRowCount][col_num];
+		System.out.println(row_num+" "+dataRowCount+" "+col_num);
+		
+		int dataIndex=0;
+		for(int i = start_Row;i<=row_num;i++) {
 			XSSFRow row = sheet.getRow(i);
+			if(row==null) continue;
 			for(int j = 0;j<col_num;j++) {
 				XSSFCell cell = row.getCell(j);
-				data[i-1][j] = format.formatCellValue(cell);
+				data[dataIndex][j] = (cell!=null)?format.formatCellValue(cell):"";
 			}
+			dataIndex++;
 		}
 		book.close();
 		return data;
 	}
-	
+
 	//Main Read
 	@DataProvider(name="filereader")
-	public String[][] read() throws FileNotFoundException, IOException{
+	public static String[][] read() throws FileNotFoundException, IOException{
 		return readExcelOperation();
 	}
 }
