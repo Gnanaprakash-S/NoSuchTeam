@@ -37,7 +37,12 @@ public class HomePage {
         PageFactory.initElements(driver, this);
     }
     
+
 	public Boolean verify(WebElement element) {
+
+	public void verify(WebElement element, String value) 
+	{
+
 		JavascriptExecutor js = (JavascriptExecutor) driver;
     	Boolean isValid = (Boolean) js.executeScript("return arguments[0].checkValidity();", element);
     	return isValid;
@@ -49,6 +54,13 @@ public class HomePage {
     	confirm.click();
     	
     	return verify(name);
+
+    public void nameField(String input) 
+    {
+    	name.sendKeys(input);
+    	confirm.click();
+    	verify(name,input);
+
     }
     
     public Boolean ageField(String nameInput,String ageInput) {
@@ -139,8 +151,6 @@ public class HomePage {
     	return verify(name);
     }
     
-    public void main() {
-    	
-    }
+
 
 }

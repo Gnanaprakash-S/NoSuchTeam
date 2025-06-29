@@ -22,6 +22,14 @@ public class TestScripts extends BaseTest{
 	{
 		homePage = new HomePage(driver);
 	}
+
+	//priority=0,dataProvider="filereader",dataProviderClass=utils.ExcelRead.class
+	
+	
+	@Test
+	public void validateName() {
+		homePage.nameField(" ");
+
 	//(priority=0,dataProvider="filereader",dataProviderClass=utils.ExcelRead.class)
 //	@Test
 //	public void getData() throws FileNotFoundException, IOException {
@@ -36,6 +44,7 @@ public class TestScripts extends BaseTest{
 //			}
 //			System.out.println();
 //		}
+
 //	}
 	@DataProvider(name = "filereader")
 	public static String[][] read() throws IOException {
@@ -61,12 +70,20 @@ public class TestScripts extends BaseTest{
 	public void validatePulse(String ... data) {
 		homePage.bpmField("bilal","18","Below 40");
 //		homePage.bpmField(data[0],data[1],data[2]);
+
+	}
+	@Test(priority=0,dataProvider="filereader",dataProviderClass=utils.ExcelRead.class)
+	public void validateName(String validName,String invalidName,String validAge,String invalidAge) {
+		homePage.nameField(validName);
+
+
 	}
 	
 	@Test(priority=3,dataProvider="filereader")
 	public void validateSystolic(String ... data) {
 		homePage.systolicBP(data[0],data[1],data[2],data[3]);
 	}
+
 
 	@Test(priority=4,dataProvider="filereader")
 	public void validateDiastolic(String ... data) {
@@ -79,6 +96,7 @@ public class TestScripts extends BaseTest{
     	System.out.println("It's not submitting without the mandatory fields as EXPECTED"); 
 	} 
 	
+
 
 }
 
