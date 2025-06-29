@@ -5,10 +5,12 @@
     <classes>
       <class name="tests.TestScripts">
         <methods>
+          <include name="Success"/>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="setUpPagesAndUtils"/>
-          <include name="validateCalculate"/>
+          <include name="Doctor"/>
+          <include name="Range"/>
         </methods>
       </class> <!-- tests.TestScripts -->
     </classes>

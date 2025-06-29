@@ -3,6 +3,8 @@ package pages;
 
 import org.openqa.selenium.Alert;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -13,6 +15,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+
+import utils.ExcelRead;
 
 public class HomePage {
 	
@@ -155,10 +159,22 @@ public class HomePage {
     {
     	try {
     		Alert alert=driver.switchTo().alert();
-    		String text = alert.getText();
+    		String text = alert.getText().toLowerCase();
     		alert.accept();
-    		return text.contains(expectedText);
+    		return text.contains(expectedText.toLowerCase());
     	}catch(NoAlertPresentException e){
+    		return false;
+    	}
+    }
+    
+    public boolean isAlertPresent()
+    {
+    	try 
+    	{
+    		Alert alert=driver.switchTo().alert();
+    		return true;
+    	}
+    	catch(Exception e){
     		return false;
     	}
     }
@@ -171,7 +187,114 @@ public class HomePage {
     		return false;
     	}
     }
+     
+    public void consultDoctor() throws FileNotFoundException, IOException 
+    {
+    	ExcelRead excelData = new ExcelRead(System.getProperty("user.dir") + "/src/Resources/Updated_Final_Tests1.xlsx", "Consult_Doctor",1);
+	    String[][] data = excelData.readExcelOperation();
+        int row = data.length;
+        int col = data[0].length;
 
+	    for(int i=0;i<row;i++)
+	    {
+	    	name.clear();
+	    	age.clear();
+	    	systolic.clear();
+	    	diastolic.clear();
+	    	name.sendKeys("Prakash");
+        	age.sendKeys("18");
+        	Select sel = new Select(pulse);
+        	sel.selectByVisibleText(data[i][3]);
+        	systolic.sendKeys(data[i][0]);
+        	diastolic.sendKeys(data[i][1]);
+        	confirm.click();	
+        	if(!isAlertPresent("Consult a Doctor"))
+        	{
+        		System.out.println("Systolic BP : "+data[i][0]+"  Diastolic BP : "+data[i][1]+"  Pulse BP :"+data[i][3]+"  --NOT WORKING");
+        		Assert.fail();
+        		break;
+        	}
+	    }
+    }
+    
+    public void notInRange() throws FileNotFoundException, IOException 
+    {
+    	ExcelRead excelData = new ExcelRead(System.getProperty("user.dir") + "/src/Resources/Updated_Final_Tests1.xlsx", "Not_In_Range",1);
+	    String[][] data = excelData.readExcelOperation();
+        int row = data.length;
+        int col = data[0].length;
+
+	    for(int i=0;i<row;i++)
+	    {
+	    	name.clear();
+	    	age.clear();
+	    	systolic.clear();
+	    	diastolic.clear();
+	    	name.sendKeys("Prakash");
+        	age.sendKeys("18");
+        	Select sel = new Select(pulse);
+        	sel.selectByVisibleText(data[i][3]);
+        	systolic.sendKeys(data[i][0]);
+        	diastolic.sendKeys(data[i][1]);
+        	confirm.click();	
+        	if(!isAlertPresent("Not Valid"))
+        	{
+        		System.out.println("Systolic BP : "+data[i][0]+"  Diastolic BP : "+data[i][1]+"  Pulse BP :"+data[i][3]+"  --NOT WORKING");
+        		Assert.fail();
+        		break;
+        	}
+	    }
+    }
+    
+    public void success() throws FileNotFoundException, IOException 
+    {
+    	ExcelRead excelData = new ExcelRead(System.getProperty("user.dir") + "/src/Resources/Updated_Final_Tests1.xlsx", "Success",1);
+	    String[][] data = excelData.readExcelOperation();
+        int row = data.length;
+        int col = data[0].length;
+
+	    for(int i=0;i<row;i++)
+	    {
+	    	name.clear();
+	    	age.clear();
+	    	systolic.clear();
+	    	diastolic.clear();
+	    	name.sendKeys("Prakash");
+        	age.sendKeys("18");
+        	Select sel = new Select(pulse);
+        	sel.selectByVisibleText(data[i][3]);
+        	systolic.sendKeys(data[i][0]);
+        	diastolic.sendKeys(data[i][1]);
+        	confirm.click();	
+        	if(isResultPresent())
+        	{
+        		driver.navigate().refresh();
+        	}
+        	else
+        	{
+        		System.out.println("Systolic BP : "+data[i][0]+"  Diastolic BP : "+data[i][1]+"  Pulse BP :"+data[i][3]+"  --NOT WORKING");
+        		Assert.fail();
+        		break;
+        	}
+//        	if(isAlertPresent())
+//        	{
+//        		System.out.println("Systolic BP : "+data[i][0]+"  Diastolic BP : "+data[i][1]+"  Pulse BP :"+data[i][3]+"  --NOT WORKING");
+//        		Assert.fail();
+//        		break;
+//        	}
+//        	else if(isResultPresent())
+//        	{
+//        		driver.navigate().refresh();
+//        	}
+//        	else
+//        	{
+//        		System.out.println("Systolic BP : "+data[i][0]+"  Diastolic BP : "+data[i][1]+"  Pulse BP :"+data[i][3]+"  --NOT WORKING");
+//        		Assert.fail();
+//        		break;
+//        	}
+        	
+	    }
+    }
 
 
 }
