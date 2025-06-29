@@ -43,6 +43,21 @@ public class HomePage {
 	@FindBy(id="scoreCard")
 	WebElement resultBox;
 	
+	@FindBy(id="age_score")
+	WebElement ageScore;
+	
+	@FindBy(id="pulse_score")
+	WebElement pulseScore;
+	
+	@FindBy(id="bp_score")
+	WebElement bpScore;
+	
+	@FindBy(id="overall_score")
+	WebElement overallScore;
+	
+	@FindBy(xpath="//button[@class=\"btn btn-reset\"]")
+	WebElement reset;
+	
 	
 	public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -73,10 +88,10 @@ public class HomePage {
     	name.sendKeys(nameInput);
     	age.sendKeys(ageInput);
     	confirm.click();
-    	return verify(age);    	
+    	return verify(age);     	
     }
     
-    public void bpmField(String nameInput,String ageInput, String bpmInput) {
+    public Boolean bpmField(String nameInput,String ageInput, String bpmInput) {
     	name.clear();
     	age.clear();
     	name.sendKeys(nameInput);
@@ -94,7 +109,7 @@ public class HomePage {
     	sel.selectByVisibleText(bpmInput);
     	confirm.click();
 
-    	verify(pulse);
+    	return verify(pulse);
 
     }
     
@@ -131,6 +146,10 @@ public class HomePage {
 
 
     public void withAllValid(String nameInput,String ageInput, String bpmInput, String systolicBPInput, String diastolicBPInput) {
+    	if(reset.isDisplayed())
+    	{
+    		reset.click();
+    	}
     	name.clear();
     	age.clear();
     	systolic.clear();
@@ -143,7 +162,7 @@ public class HomePage {
     	diastolic.sendKeys(diastolicBPInput);
     	confirm.click();
     }
-    
+  
     public Boolean clickCalculate() {
     	name.clear();
     	age.clear();
@@ -153,6 +172,26 @@ public class HomePage {
     	diastolic.clear();
     	confirm.click();
     	return verify(name);
+    }
+    
+    public String  getAgeScore()
+    {
+    	return ageScore.getText();
+    }
+    
+    public String getPulseScore()
+    {
+    	return pulseScore.getText();
+    }
+    
+    public String getBpScore()
+    {
+    	return bpScore.getText();
+    }
+    
+    public String getOverallScore()
+    {
+    	return overallScore.getText();
     }
 
     public boolean isAlertPresent(String expectedText)
@@ -194,6 +233,7 @@ public class HomePage {
 	    String[][] data = excelData.readExcelOperation();
         int row = data.length;
         int col = data[0].length;
+
 
 	    for(int i=0;i<row;i++)
 	    {
@@ -295,6 +335,7 @@ public class HomePage {
         	
 	    }
     }
+
 
 
 }
