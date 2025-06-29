@@ -78,8 +78,8 @@ public class TestScripts extends BaseTest{
 		Assert.assertFalse(homePage.clickCalculate(),"It's accepting form without any values.");
     	System.out.println("It's not submitting without the mandatory fields as EXPECTED"); 
 	} 
-	fgdhdh
 	
+	gdjnvdfvndjsf
 	
 
 }
