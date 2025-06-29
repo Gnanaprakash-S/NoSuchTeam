@@ -2,12 +2,24 @@
 <testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
+  <suite started-at="2025-06-27T22:42:23 IST" name="Default suite" finished-at="2025-06-27T22:42:31 IST" duration-ms="8681">
+=======
   <suite started-at="2025-06-28T18:56:34 IST" name="Default suite" finished-at="2025-06-28T18:56:42 IST" duration-ms="7339">
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
     <groups>
     </groups>
+<<<<<<< HEAD
+    <test started-at="2025-06-27T22:42:23 IST" name="Default test" finished-at="2025-06-27T22:42:31 IST" duration-ms="8681">
+=======
     <test started-at="2025-06-28T18:56:34 IST" name="Default test" finished-at="2025-06-28T18:56:42 IST" duration-ms="7339">
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
       <class name="tests.TestScripts">
+<<<<<<< HEAD
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.TestScripts@179ece50]" started-at="2025-06-27T22:42:23 IST" name="setUp" finished-at="2025-06-27T22:42:28 IST" duration-ms="5619" status="PASS">
+=======
         <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.TestScripts@3cd3e762]" started-at="2025-06-28T18:56:34 IST" name="setUp" finished-at="2025-06-28T18:56:39 IST" duration-ms="4715" status="PASS">
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
           <params>
             <param index="0">
               <value>
@@ -18,12 +30,37 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
+<<<<<<< HEAD
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@179ece50]" started-at="2025-06-27T22:42:28 IST" name="setUpPagesAndUtils" finished-at="2025-06-27T22:42:29 IST" duration-ms="126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateAge()[pri:0, instance:tests.TestScripts@179ece50]" started-at="2025-06-27T22:42:29 IST" name="validateAge" finished-at="2025-06-27T22:42:29 IST" duration-ms="619" status="FAIL">
+          <exception class="java.lang.AssertionError">
+=======
         <test-method signature="validateName(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.TestScripts@3cd3e762]" started-at="2025-06-28T18:56:39 IST" name="validateName" data-provider="filereader" finished-at="2025-06-28T18:56:39 IST" duration-ms="0" status="FAIL">
           <exception class="java.lang.RuntimeException">
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
             <message>
               <![CDATA[java.lang.NullPointerException]]>
             </message>
             <full-stacktrace>
+<<<<<<< HEAD
+              <![CDATA[java.lang.AssertionError: Invalid input was accepted for value : 17 expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at pages.HomePage.verify(HomePage.java:44)
+at pages.HomePage.ageField(HomePage.java:62)
+at tests.TestScripts.validateAge(TestScripts.java:32)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+=======
               <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
@@ -32,6 +69,7 @@ at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
 at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
 at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949)
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -67,8 +105,13 @@ at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedExce
           </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
+        </test-method> <!-- validateAge -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TestScripts@179ece50]" started-at="2025-06-27T22:42:29 IST" name="tearDown" finished-at="2025-06-27T22:42:31 IST" duration-ms="2262" status="PASS">
+=======
         </test-method> <!-- validateName -->
         <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TestScripts@3cd3e762]" started-at="2025-06-28T18:56:39 IST" name="tearDown" finished-at="2025-06-28T18:56:42 IST" duration-ms="2479" status="PASS">
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

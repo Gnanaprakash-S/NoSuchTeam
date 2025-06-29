@@ -22,6 +22,14 @@ public class TestScripts extends BaseTest{
 		homePage = new HomePage(driver);
 		excelData= new ExcelRead("src/Resources/Health score calculator.xlsx","test_data_sheet");
 	}
+
+	//priority=0,dataProvider="filereader",dataProviderClass=utils.ExcelRead.class
+	
+	
+	@Test
+	public void validateName() {
+		homePage.nameField(" ");
+
 	//(priority=0,dataProvider="filereader",dataProviderClass=utils.ExcelRead.class)
 //	@Test
 //	public void getData() throws FileNotFoundException, IOException {
@@ -35,17 +43,18 @@ public class TestScripts extends BaseTest{
 //			}
 //			System.out.println();
 //		}
-//	}
+	}
 	@Test(priority=0,dataProvider="filereader",dataProviderClass=utils.ExcelRead.class)
 	public void validateName(String validName,String invalidName,String validAge,String invalidAge) {
 		homePage.nameField(validName);
+
 	}
 	
 	@Test
 	public void validateAge() {
 		homePage.ageField("Dev","17");
 	}
-
+    
 }
 
 

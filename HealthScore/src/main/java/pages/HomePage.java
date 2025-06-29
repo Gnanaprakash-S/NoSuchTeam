@@ -35,7 +35,8 @@ public class HomePage {
         PageFactory.initElements(driver, this);
     }
     
-	public void verify(WebElement element, String value) {
+	public void verify(WebElement element, String value) 
+	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
     	Boolean isValid = (Boolean) js.executeScript("return arguments[0].checkValidity();", element);
     	
@@ -43,10 +44,10 @@ public class HomePage {
     	System.out.println("Valid input for value : "+value);
 	}
 
-    public void nameField(String input) {
+    public void nameField(String input) 
+    {
     	name.sendKeys(input);
     	confirm.click();
-    	
     	verify(name,input);
     }
     
@@ -92,5 +93,7 @@ public class HomePage {
     	verify(diastolic,diastolicBPInput);
     	
     }
+    
+    
 
 }
