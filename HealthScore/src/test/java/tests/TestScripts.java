@@ -160,9 +160,6 @@ public class TestScripts extends BaseTest{
 		}
 		
 	}
-<<<<<<< HEAD
-
-=======
 	
 	@Test(priority=6, dataProvider="fileread")
 	public void validateHealthRemark(String... data) {
@@ -194,7 +191,7 @@ public class TestScripts extends BaseTest{
 	    Assert.assertTrue(homePage.areFieldsCleared(), "Input fields were not cleared after reset.");
 	    System.out.println("Reset button successfully cleared all fields and hid the result.");
 	}
->>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
+
 
 
 }
