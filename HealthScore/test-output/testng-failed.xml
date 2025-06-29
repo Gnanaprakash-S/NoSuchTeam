@@ -6,9 +6,9 @@
       <class name="tests.TestScripts">
         <methods>
           <include name="setUp"/>
+          <include name="validateNameField" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="setUpPagesAndUtils"/>
-          <include name="validateName"/>
         </methods>
       </class> <!-- tests.TestScripts -->
     </classes>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
+<testng-results ignored="1" total="4" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-28T18:56:34 IST" name="Default suite" finished-at="2025-06-28T18:56:42 IST" duration-ms="7339">
+  <suite started-at="2025-06-28T23:51:03 IST" name="Default suite" finished-at="2025-06-28T23:51:17 IST" duration-ms="14027">
     <groups>
     </groups>
-    <test started-at="2025-06-28T18:56:34 IST" name="Default test" finished-at="2025-06-28T18:56:42 IST" duration-ms="7339">
+    <test started-at="2025-06-28T23:51:03 IST" name="Default test" finished-at="2025-06-28T23:51:17 IST" duration-ms="14027">
       <class name="tests.TestScripts">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.TestScripts@3cd3e762]" started-at="2025-06-28T18:56:34 IST" name="setUp" finished-at="2025-06-28T18:56:39 IST" duration-ms="4715" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.TestScripts@1c1bbc4e]" started-at="2025-06-28T23:51:03 IST" name="setUp" finished-at="2025-06-28T23:51:08 IST" duration-ms="5449" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,20 +18,35 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validateName(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.TestScripts@3cd3e762]" started-at="2025-06-28T18:56:39 IST" name="validateName" data-provider="filereader" finished-at="2025-06-28T18:56:39 IST" duration-ms="0" status="FAIL">
-          <exception class="java.lang.RuntimeException">
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@1c1bbc4e]" started-at="2025-06-28T23:51:10 IST" name="setUpPagesAndUtils" finished-at="2025-06-28T23:51:10 IST" duration-ms="51" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateNameField([Ljava.lang.String;)[pri:0, instance:tests.TestScripts@1c1bbc4e]" started-at="2025-06-28T23:51:10 IST" name="validateNameField" data-provider="filereader" finished-at="2025-06-28T23:51:11 IST" duration-ms="1091" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@344426bf]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[java.lang.NullPointerException]]>
+              <![CDATA[Invalid input was accepted  :   expected [false] but found [true]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:809)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
-at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
-at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949)
+              <![CDATA[java.lang.AssertionError: Invalid input was accepted  :   expected [false] but found [true]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertFalse(Assert.java:79)
+at tests.TestScripts.validateNameField(TestScripts.java:51)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -51,24 +66,43 @@ at org.testng.TestNG.run(TestNG.java:1079)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.NullPointerException
-at java.base/java.io.FileInputStream.<init>(FileInputStream.java:144)
-at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
-at utils.ExcelRead.readExcelOperation(ExcelRead.java:29)
-at utils.ExcelRead.read(ExcelRead.java:62)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54)
-... 25 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateName -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TestScripts@3cd3e762]" started-at="2025-06-28T18:56:39 IST" name="tearDown" finished-at="2025-06-28T18:56:42 IST" duration-ms="2479" status="PASS">
+        </test-method> <!-- validateNameField -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@1c1bbc4e]" started-at="2025-06-28T23:51:11 IST" name="setUpPagesAndUtils" finished-at="2025-06-28T23:51:11 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateNameField([Ljava.lang.String;)[pri:0, instance:tests.TestScripts@1c1bbc4e]" started-at="2025-06-28T23:51:11 IST" name="validateNameField" data-provider="filereader" finished-at="2025-06-28T23:51:12 IST" duration-ms="1056" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@10bd9df0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateNameField -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@1c1bbc4e]" started-at="2025-06-28T23:51:12 IST" name="setUpPagesAndUtils" finished-at="2025-06-28T23:51:12 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateNameField([Ljava.lang.String;)[pri:0, instance:tests.TestScripts@1c1bbc4e]" started-at="2025-06-28T23:51:12 IST" name="validateNameField" data-provider="filereader" finished-at="2025-06-28T23:51:13 IST" duration-ms="1246" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@3ae0b770]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateNameField -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TestScripts@1c1bbc4e]" started-at="2025-06-28T23:51:13 IST" name="tearDown" finished-at="2025-06-28T23:51:17 IST" duration-ms="3619" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

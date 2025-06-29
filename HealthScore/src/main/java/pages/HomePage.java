@@ -1,12 +1,13 @@
 package pages;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 
 public class HomePage {
 	
@@ -30,24 +31,28 @@ public class HomePage {
 	@FindBy(xpath ="//button[@type=\"submit\"]")
 	WebElement confirm;
 	
+	@FindBy(id="scoreCard")
+	WebElement resultBox;
+	
+	
 	public HomePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
     
-	public void verify(WebElement element, String value) {
+	public boolean verify(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
     	Boolean isValid = (Boolean) js.executeScript("return arguments[0].checkValidity();", element);
-    	
-    	Assert.assertFalse(isValid,"Invalid input was accepted for value : "+value);
-    	System.out.println("Valid input for value : "+value);
+    	return isValid;
 	}
 
     public void nameField(String input) {
+    	name.clear();
     	name.sendKeys(input);
     	confirm.click();
-    	
-    	verify(name,input);
+    }
+    public boolean isNameValid(){
+    	return verify(name);
     }
     
     public void ageField(String nameInput,String ageInput) {
@@ -55,7 +60,7 @@ public class HomePage {
     	age.sendKeys(ageInput);
     	confirm.click();
     	
-    	verify(age,ageInput);
+    	verify(age);
     	
     }
     
@@ -66,7 +71,7 @@ public class HomePage {
     	sel.selectByVisibleText(bpmInput);
     	confirm.click();
     	
-    	verify(pulse,bpmInput);
+    	verify(pulse);
     }
     
     public void systolicBP(String nameInput,String ageInput, String bpmInput, String systolicBPInput) {
@@ -77,7 +82,7 @@ public class HomePage {
     	systolic.sendKeys(systolicBPInput);
     	confirm.click();
     	
-    	verify(systolic,systolicBPInput);
+    	verify(systolic);
     }
     
     public void diastolicBP(String nameInput,String ageInput, String bpmInput, String systolicBPInput, String diastolicBPInput) {
@@ -89,8 +94,33 @@ public class HomePage {
     	diastolic.sendKeys(diastolicBPInput);
     	confirm.click();
     	
-    	verify(diastolic,diastolicBPInput);
+    	verify(diastolic);
     	
     }
+    
+    public boolean isAlertPresent(String expectedText)
+    {
+    	try {
+    		Alert alert=driver.switchTo().alert();
+    		String text = alert.getText();
+    		alert.accept();
+    		return text.contains(expectedText);
+    	}catch(NoAlertPresentException e){
+    		return false;
+    	}
+    }
+    
+    public boolean isResultPresent(String expectedText)
+    {
+    	try {
+    		Alert alert=driver.switchTo().alert();
+    		String text = alert.getText();
+    		alert.accept();
+    		return text.contains(expectedText);
+    	}catch(NoAlertPresentException e){
+    		return false;
+    	}
+    }
+
 
 }

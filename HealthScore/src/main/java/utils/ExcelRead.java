@@ -9,23 +9,23 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.testng.annotations.DataProvider;
+
 
 public class ExcelRead {
 	
 	//Data Members
-	public static String [][] data;
-	public static String filename;
-	public static String sheetName;
+	public String [][] data;
+	public String filename;
+	public String sheetName;
 	
 	//Constructor
 	public ExcelRead(String filename, String sheetName) {
-		ExcelRead.filename = filename;
-		ExcelRead.sheetName=sheetName;
+		this.filename = filename;
+		this.sheetName=sheetName;
 	}
 	
 	//Reading Excel Sheet
-	public static String [][] readExcelOperation() throws FileNotFoundException, IOException{
+	public String [][] readExcelOperation() throws FileNotFoundException, IOException{
 		XSSFWorkbook book = new XSSFWorkbook(new FileInputStream(filename));
 		XSSFSheet sheet = book.getSheet(sheetName);
 		DataFormatter format = new DataFormatter();
@@ -40,7 +40,6 @@ public class ExcelRead {
 	    }
 	    
 		data = new String[dataRowCount][col_num];
-		System.out.println(row_num+" "+dataRowCount+" "+col_num);
 		
 		int dataIndex=0;
 		for(int i = start_Row;i<=row_num;i++) {
@@ -57,8 +56,5 @@ public class ExcelRead {
 	}
 
 	//Main Read
-	@DataProvider(name="filereader")
-	public static String[][] read() throws FileNotFoundException, IOException{
-		return readExcelOperation();
-	}
+	
 }
