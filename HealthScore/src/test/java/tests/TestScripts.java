@@ -16,7 +16,7 @@ import utils.ExcelRead;
 public class TestScripts extends BaseTest{
 	
 	HomePage homePage;
-
+  
 	@BeforeMethod   
 	public void setUpPagesAndUtils()
 	{
