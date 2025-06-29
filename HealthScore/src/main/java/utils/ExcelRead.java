@@ -18,11 +18,13 @@ public class ExcelRead {
 	public String filename;
 	public String sheetName;
 	public int start_Row;
+	public int rowLimit;
 	//Constructor
-	public ExcelRead(String filename, String sheetName, int start_Row) {
+	public ExcelRead(String filename, String sheetName, int start_Row,int rowLimit) {
 		this.filename = filename;
 		this.sheetName=sheetName;
 		this.start_Row=start_Row;
+		this.rowLimit=rowLimit;
 	}
 	
 	//Reading Excel Sheet
@@ -31,18 +33,18 @@ public class ExcelRead {
 		XSSFSheet sheet = book.getSheet(sheetName);
 		DataFormatter format = new DataFormatter();
 		int col_num = sheet.getRow(1).getLastCellNum();
-		int row_num = sheet.getLastRowNum();
+		//int row_num = sheet.getLastRowNum();
 		
 		int dataRowCount = 0;
 		
-	    for (int i = start_Row; i <= row_num; i++) {
+	    for (int i = start_Row; i <= rowLimit; i++) {
 	        if (sheet.getRow(i) != null) dataRowCount++;
 	    }
 	    
 		data = new String[dataRowCount][col_num];
 		
 		int dataIndex=0;
-		for(int i = start_Row;i<=row_num;i++) {
+		for(int i = start_Row;i<=rowLimit;i++) {
 			XSSFRow row = sheet.getRow(i);
 			if(row==null) continue;
 			for(int j = 0;j<col_num;j++) {

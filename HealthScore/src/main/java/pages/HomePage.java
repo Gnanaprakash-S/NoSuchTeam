@@ -39,6 +39,21 @@ public class HomePage {
 	@FindBy(id="scoreCard")
 	WebElement resultBox;
 	
+	@FindBy(id="age_score")
+	WebElement ageScore;
+	
+	@FindBy(id="pulse_score")
+	WebElement pulseScore;
+	
+	@FindBy(id="bp_score")
+	WebElement bpScore;
+	
+	@FindBy(id="overall_score")
+	WebElement overallScore;
+	
+	@FindBy(xpath="//button[@class=\"btn btn-reset\"]")
+	WebElement reset;
+	
 	
 	public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -127,6 +142,10 @@ public class HomePage {
 
 
     public void withAllValid(String nameInput,String ageInput, String bpmInput, String systolicBPInput, String diastolicBPInput) {
+    	if(reset.isDisplayed())
+    	{
+    		reset.click();
+    	}
     	name.clear();
     	age.clear();
     	systolic.clear();
@@ -139,7 +158,7 @@ public class HomePage {
     	diastolic.sendKeys(diastolicBPInput);
     	confirm.click();
     }
-    
+  
     public Boolean clickCalculate() {
     	name.clear();
     	age.clear();
@@ -150,14 +169,34 @@ public class HomePage {
     	confirm.click();
     	return verify(name);
     }
+    
+    public String  getAgeScore()
+    {
+    	return ageScore.getText();
+    }
+    
+    public String getPulseScore()
+    {
+    	return pulseScore.getText();
+    }
+    
+    public String getBpScore()
+    {
+    	return bpScore.getText();
+    }
+    
+    public String getOverallScore()
+    {
+    	return overallScore.getText();
+    }
 
     public boolean isAlertPresent(String expectedText)
     {
     	try {
     		Alert alert=driver.switchTo().alert();
-    		String text = alert.getText();
+    		String text = alert.getText().toLowerCase();
     		alert.accept();
-    		return text.contains(expectedText);
+    		return text.contains(expectedText.toLowerCase());
     	}catch(NoAlertPresentException e){
     		return false;
     	}
@@ -171,7 +210,5 @@ public class HomePage {
     		return false;
     	}
     }
-
-
 
 }
