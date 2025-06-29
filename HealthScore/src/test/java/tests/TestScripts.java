@@ -23,9 +23,9 @@ public class TestScripts extends BaseTest{
 		homePage = new HomePage(driver);
 	}
 	//(priority=0,dataProvider="filereader",dataProviderClass=utils.ExcelRead.class)
-//	@Test
+	@Test
 //	public void getData() throws FileNotFoundException, IOException {
-//		ExcelRead excelData = new ExcelRead("C:\\Users\\2401015\\OneDrive - Cognizant\\Desktop\\NoSuchTeam\\HealthScore\\src\\Resources\\Updated_Final_Tests 1.xlsx", "Name");
+//		ExcelRead excelData = new ExcelRead(System.getProperty("user.dir") + "/src/Resources/Updated_Final_Tests 2.xlsx", "Test",2);
 //	    String[][] data= excelData.readExcelOperation();
 //		
 //		for(String[] val:data)
@@ -39,17 +39,14 @@ public class TestScripts extends BaseTest{
 //	}
 	@DataProvider(name = "filereader")
 	public static String[][] read() throws IOException {
-		ExcelRead excelData = new ExcelRead("C:\\Users\\2401015\\OneDrive - Cognizant\\Desktop\\NoSuchTeam\\HealthScore\\src\\Resources\\Updated_Final_Tests 1.xlsx", "Name");
+		ExcelRead excelData = new ExcelRead(System.getProperty("user.dir") + "/src/Resources/Updated_Final_Tests 2.xlsx", "Test",2);
 	    return excelData.readExcelOperation();
 	}
 
 	@Test(priority=0,dataProvider="filereader")
 	public void validateName(String ... data) {
-		Assert.assertTrue(homePage.nameField(data[0]),data[0]+" : INVALID");
-    	System.out.println(data[0]+" : VALID");
-    	
-    	Assert.assertFalse(homePage.nameField(data[1]),data[1]+" : VALID");
-    	System.out.println(data[1]+" : INVALID");
+		Assert.assertTrue(homePage.nameField(data[0]),data[0]+" it needs to pass but fails.");    	
+    	Assert.assertFalse(homePage.nameField(data[1]),data[1]+" it needs to fails but pass.");
 	}
 	
 	@Test(priority=1,dataProvider="filereader")

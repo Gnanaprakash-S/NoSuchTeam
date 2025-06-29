@@ -17,11 +17,12 @@ public class ExcelRead {
 	public String [][] data;
 	public String filename;
 	public String sheetName;
-	
+	public int start_Row;
 	//Constructor
-	public ExcelRead(String filename, String sheetName) {
+	public ExcelRead(String filename, String sheetName, int start_Row) {
 		this.filename = filename;
 		this.sheetName=sheetName;
+		this.start_Row=start_Row;
 	}
 	
 	//Reading Excel Sheet
@@ -29,7 +30,6 @@ public class ExcelRead {
 		XSSFWorkbook book = new XSSFWorkbook(new FileInputStream(filename));
 		XSSFSheet sheet = book.getSheet(sheetName);
 		DataFormatter format = new DataFormatter();
-		int start_Row=1;
 		int col_num = sheet.getRow(1).getLastCellNum();
 		int row_num = sheet.getLastRowNum();
 		

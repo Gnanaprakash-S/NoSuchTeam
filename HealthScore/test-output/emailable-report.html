@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">20,520</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.TestScripts</td><td><a href="#m0">validateName</a></td><td rowspan="1">1751180908294</td><td rowspan="1">1136</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">tests.TestScripts</td><td><a href="#m1">validateName</a></td><td rowspan="6">1751180909453</td><td rowspan="6">922</td></tr><tr class="passedeven"><td><a href="#m2">validateName</a></td></tr><tr class="passedeven"><td><a href="#m3">validateName</a></td></tr><tr class="passedeven"><td><a href="#m4">validateName</a></td></tr><tr class="passedeven"><td><a href="#m5">validateName</a></td></tr><tr class="passedeven"><td><a href="#m6">validateName</a></td></tr></tbody>
+</table>
+<h2>Default test</h2><h3 id="m0">tests.TestScripts#validateName</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[Dhanush,  , 18, 17, Below 40, 80, 79, 50, 30]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError:   it needs to fails but pass. expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at tests.TestScripts.validateName(TestScripts.java:49)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.TestScripts#validateName</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[Prakash, Dha123, 1000, 16, 40-49 BPM, 150, 151, 99, 29]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.TestScripts#validateName</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[deva, 45678, 19, 1, 60-80 BPM, 140, 30, 55, 49]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.TestScripts#validateName</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[akash, ram123, 56, 10, 81-90 BPM, 86, 40, 78, 100]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.TestScripts#validateName</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[Thaniga, 9090, 2000, 8, Above 100, 149, 78, 98, 150]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">tests.TestScripts#validateName</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[bilal, *(@dha, 200, 15, 50-59 BPM, 130, 20, 51, 40]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">tests.TestScripts#validateName</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[vetri, bib456, 89, 5, 91-100 BPM, 76, 45, 96, 101]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
