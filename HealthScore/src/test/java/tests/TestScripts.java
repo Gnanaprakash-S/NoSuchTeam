@@ -22,40 +22,53 @@ public class TestScripts extends BaseTest{
 	{
 		homePage = new HomePage(driver);
 	}
-	//(priority=0,dataProvider="filereader",dataProviderClass=utils.ExcelRead.class)
-//	@Test
-//	public void getData() throws FileNotFoundException, IOException {
-//		String[][] data = ExcelRead.read();
-//		
-//		for(String[] val:data)
-//		{
-//			for(String ele:val)
-//			{
-//				System.out.print(ele+" ");
-//			}
-//			System.out.println();
-//		}
-//	}
-	@DataProvider(name="filereader")
-	public static String[][] read() throws FileNotFoundException, IOException{
-		ExcelRead excelData= new ExcelRead("src/Resources/Health score calculator.xlsx","test_data_sheet");
-		return excelData.readExcelOperation();
+
+	@DataProvider(name = "filereader")
+	public static String[][] read() throws IOException,FileNotFoundException{
+		ExcelRead excelData = new ExcelRead("C:\\Users\\2401015\\OneDrive - Cognizant\\Desktop\\NoSuchTeam\\HealthScore\\src\\Resources\\Updated_Final_Tests 1.xlsx", "Name");
+	    return excelData.readExcelOperation();
 	}
-	
+
 	@Test(priority=0,dataProvider="filereader")
-	public void validateNameField(String...data){
-		homePage.nameField(data[0]);
-		Assert.assertTrue(homePage.isNameValid(),"Invalid input was not accepted : "+data[0]);
-    	//System.out.println("Valid input for value : "+data[0]);
-		homePage.nameField(data[1]);
-    	Assert.assertFalse(homePage.isNameValid(),"Invalid input was accepted  : "+data[1]);
-    	//System.out.println("Invalid input for value : "+data[1]);
+	public void validateName(String ... data) {
+		Assert.assertTrue(homePage.nameField(data[0]),data[0]+" : INVALID");
+    	System.out.println(data[0]+" : VALID");
+    	
+    	Assert.assertFalse(homePage.nameField(data[1]),data[1]+" : VALID");
+    	System.out.println(data[1]+" : INVALID");
 	}
 	
-	@Test
-	public void validateAgeField() {
-		homePage.ageField("Dev","17");
+	@Test(priority=1,dataProvider="filereader")
+	public void validateAge(String ... data) {
+		homePage.ageField(data[0],data[1]);
 	}
+	
+	@Test(priority=2,dataProvider="filereader")
+	public void validatePulse(String ... data) {
+		homePage.bpmField("bilal","18","Below 40");
+//		homePage.bpmField(data[0],data[1],data[2]);
+
+	}
+	
+	@Test(priority=3,dataProvider="filereader")
+	public void validateSystolic(String ... data) {
+		homePage.systolicBP(data[0],data[1],data[2],data[3]);
+
+	}
+
+
+	@Test(priority=4,dataProvider="filereader")
+	public void validateDiastolic(String ... data) {
+		homePage.diastolicBP(data[0],data[1],data[2],data[3],data[4]);
+	}
+	
+	@Test(priority=5)
+	public void validateCalculate() {
+		Assert.assertFalse(homePage.clickCalculate(),"It's accepting form without any values.");
+    	System.out.println("It's not submitting without the mandatory fields as EXPECTED"); 
+	} 
+	
+
 
 }
 

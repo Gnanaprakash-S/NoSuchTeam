@@ -29,8 +29,8 @@ public class ExcelRead {
 		XSSFWorkbook book = new XSSFWorkbook(new FileInputStream(filename));
 		XSSFSheet sheet = book.getSheet(sheetName);
 		DataFormatter format = new DataFormatter();
-		int start_Row=2;
-		int col_num = sheet.getRow(2).getLastCellNum();
+		int start_Row=1;
+		int col_num = sheet.getRow(1).getLastCellNum();
 		int row_num = sheet.getLastRowNum();
 		
 		int dataRowCount = 0;
@@ -56,5 +56,12 @@ public class ExcelRead {
 	}
 
 	//Main Read
+<<<<<<< HEAD
 	
+=======
+//	@DataProvider(name="filereader")
+//	public static String[][] read() throws FileNotFoundException, IOException{
+//		return readExcelOperation();
+//	}
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
 }

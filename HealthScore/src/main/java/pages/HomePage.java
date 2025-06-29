@@ -1,6 +1,10 @@
 package pages;
 
+
 import org.openqa.selenium.Alert;
+
+import java.util.List;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
@@ -8,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 public class HomePage {
 	
@@ -40,41 +45,59 @@ public class HomePage {
         PageFactory.initElements(driver, this);
     }
     
-	public boolean verify(WebElement element) {
+
+
+	public Boolean verify(WebElement element) 
+	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
     	Boolean isValid = (Boolean) js.executeScript("return arguments[0].checkValidity();", element);
     	return isValid;
 	}
 
-    public void nameField(String input) {
+
+    public Boolean nameField(String input) {
+
     	name.clear();
     	name.sendKeys(input);
-    	confirm.click();
-    }
-    public boolean isNameValid(){
     	return verify(name);
+
     }
-    
-    public void ageField(String nameInput,String ageInput) {
+
+    public Boolean ageField(String nameInput,String ageInput) {
     	name.sendKeys(nameInput);
     	age.sendKeys(ageInput);
     	confirm.click();
-    	
-    	verify(age);
-    	
+    	return verify(age);    	
     }
     
     public void bpmField(String nameInput,String ageInput, String bpmInput) {
+    	name.clear();
+    	age.clear();
     	name.sendKeys(nameInput);
     	age.sendKeys(ageInput);
+    	boolean found=false;
     	Select sel = new Select(pulse);
+    	List<WebElement> options= sel.getOptions();
+    	for(WebElement ele : options) {
+    		if(ele.getText().trim().equals(bpmInput)) {
+    			found=true;
+    			break;
+    		}
+    	}
+    	Assert.assertTrue(found,bpmInput+" is not present in the option List.");
+    	System.out.println(bpmInput+" is present in the option List.");
     	sel.selectByVisibleText(bpmInput);
     	confirm.click();
-    	
+
     	verify(pulse);
+
     }
     
-    public void systolicBP(String nameInput,String ageInput, String bpmInput, String systolicBPInput) {
+    public Boolean systolicBP(String nameInput,String ageInput, String bpmInput, String systolicBPInput) {
+    	name.clear();
+    	age.clear();
+    	pulse.clear();
+    	systolic.clear();
     	name.sendKeys(nameInput);
     	age.sendKeys(ageInput);
     	Select sel = new Select(pulse);
@@ -82,10 +105,15 @@ public class HomePage {
     	systolic.sendKeys(systolicBPInput);
     	confirm.click();
     	
-    	verify(systolic);
+    	return verify(systolic);
     }
     
-    public void diastolicBP(String nameInput,String ageInput, String bpmInput, String systolicBPInput, String diastolicBPInput) {
+    public Boolean diastolicBP(String nameInput,String ageInput, String bpmInput, String systolicBPInput, String diastolicBPInput) {
+    	name.clear();
+    	age.clear();
+    	pulse.clear();
+    	systolic.clear();
+    	diastolic.clear();
     	name.sendKeys(nameInput);
     	age.sendKeys(ageInput);
     	Select sel = new Select(pulse);
@@ -93,11 +121,38 @@ public class HomePage {
     	systolic.sendKeys(systolicBPInput);
     	diastolic.sendKeys(diastolicBPInput);
     	confirm.click();
-    	
-    	verify(diastolic);
-    	
+
+    	return verify(diastolic);
+
+    }
+
+
+    public void withAllValid(String nameInput,String ageInput, String bpmInput, String systolicBPInput, String diastolicBPInput) {
+    	name.clear();
+    	age.clear();
+    	pulse.clear();
+    	systolic.clear();
+    	diastolic.clear();
+    	name.sendKeys(nameInput);
+    	age.sendKeys(ageInput);
+    	Select sel = new Select(pulse);
+    	sel.selectByVisibleText(bpmInput);
+    	systolic.sendKeys(systolicBPInput);
+    	diastolic.sendKeys(diastolicBPInput);
+    	confirm.click();
     }
     
+    public Boolean clickCalculate() {
+    	name.clear();
+    	age.clear();
+    	Select sel = new Select(pulse);
+    	sel.deselectAll();
+    	pulse.clear();
+    	systolic.clear();
+    	diastolic.clear();
+    	confirm.click();
+    	return verify(name);
+    }
     public boolean isAlertPresent(String expectedText)
     {
     	try {
@@ -110,13 +165,10 @@ public class HomePage {
     	}
     }
     
-    public boolean isResultPresent(String expectedText)
+    public boolean isResultPresent()
     {
     	try {
-    		Alert alert=driver.switchTo().alert();
-    		String text = alert.getText();
-    		alert.accept();
-    		return text.contains(expectedText);
+    		return resultBox.isDisplayed();
     	}catch(NoAlertPresentException e){
     		return false;
     	}
