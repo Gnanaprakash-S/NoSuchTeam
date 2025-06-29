@@ -138,5 +138,9 @@ public class HomePage {
     	confirm.click();
     	return verify(name);
     }
+    
+    public main() {
+    	
+    }
 
 }
