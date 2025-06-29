@@ -139,7 +139,7 @@ public class HomePage {
     	return verify(name);
     }
     
-    public main() {
+    public void main() {
     	
     }
 
