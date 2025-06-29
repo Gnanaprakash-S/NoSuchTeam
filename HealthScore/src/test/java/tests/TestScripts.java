@@ -131,7 +131,7 @@ public class TestScripts extends BaseTest{
 	
 	
 	
-	@Test(priority = 7)
+	@Test(priority = 7)  
 	public void validateResetButton(){
 	    System.out.println("Testing Reset Button behavior");
 	    homePage.withAllValid("Dhanush", "25", "60-80 BPM", "110", "70");
