@@ -55,13 +55,4 @@ public class ExcelRead {
 		return data;
 	}
 
-	//Main Read
-<<<<<<< HEAD
-	
-=======
-//	@DataProvider(name="filereader")
-//	public static String[][] read() throws FileNotFoundException, IOException{
-//		return readExcelOperation();
-//	}
->>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
 }

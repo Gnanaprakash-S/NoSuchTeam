@@ -23,6 +23,7 @@ public class TestScripts extends BaseTest{
 		homePage = new HomePage(driver);
 	}
 
+	@DataProvider(name="filereader")
 	public static String[][] read() throws IOException {
 		ExcelRead excelData = new ExcelRead(System.getProperty("user.dir") + "/src/Resources/Updated_Final_Tests 2.xlsx", "Test",2);
 	    return excelData.readExcelOperation();
