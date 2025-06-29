@@ -2,6 +2,8 @@ package tests;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -25,6 +27,12 @@ public class TestScripts extends BaseTest{
 	@DataProvider(name="filereader")
 	public static String[][] read() throws IOException {
 		ExcelRead excelData = new ExcelRead(System.getProperty("user.dir") + "/src/Resources/Updated_Final_Tests 2 (2).xlsx", "Test",2,8);
+	    return excelData.readExcelOperation();
+	}
+	
+	@DataProvider(name="fileread")
+	public static String[][] reads() throws IOException {
+	    ExcelRead excelData = new ExcelRead(System.getProperty("user.dir") + "/src/Resources/Updated_Final_Tests 2 (2).xlsx", "Remarks",1,15);
 	    return excelData.readExcelOperation();
 	}
 
@@ -101,6 +109,37 @@ public class TestScripts extends BaseTest{
 			Assert.fail("It should provide score but it failed");
 		}
 		
+	}
+	
+	@Test(priority=6, dataProvider="fileread")
+	public void validateHealthRemark(String... data) {
+	    String name = data[0];
+	    String age = data[1];
+	    String pulse = data[2];
+	    String systolicBP = data[3];
+	    String diastolicBP = data[4];
+	    String expectedRemark = data[5];
+ 
+	    homePage.withAllValid(name, age, pulse, systolicBP, diastolicBP);
+	    Assert.assertTrue(homePage.isResultPresent(), "Result card not displayed for " + name);
+	    
+	    WebElement resultBox = driver.findElement(By.className("result-text-box"));
+	    String resultText = resultBox.getText();
+	    Assert.assertTrue(resultText.toUpperCase().contains(expectedRemark.toUpperCase()),"Mismatch for " + name + ": Expected '" + expectedRemark + "', but found -> " + resultText);
+	}
+	
+	
+	
+	
+	@Test(priority = 7)
+	public void validateResetButton(){
+	    System.out.println("Testing Reset Button behavior");
+	    homePage.withAllValid("Dhanush", "25", "60-80 BPM", "110", "70");
+	    Assert.assertTrue(homePage.isResultPresent(), "Result card not displayed before reset.");
+	    homePage.clickReset();
+	    Assert.assertTrue(homePage.isResultPresent(), "Result card should be hidden after reset.");
+	    Assert.assertTrue(homePage.areFieldsCleared(), "Input fields were not cleared after reset.");
+	    System.out.println("Reset button successfully cleared all fields and hid the result.");
 	}
 
 
