@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
 =======
 <<<<<<< HEAD
@@ -8,8 +9,12 @@
 <testng-results ignored="5" total="12" passed="4" failed="3" skipped="0">
 >>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
 >>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
+=======
+<testng-results ignored="8" total="9" passed="1" failed="0" skipped="0">
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
 <<<<<<< HEAD
   <suite started-at="2025-06-29T22:00:19 IST" name="Default suite" finished-at="2025-06-29T22:02:31 IST" duration-ms="131215">
 =======
@@ -19,8 +24,12 @@
   <suite started-at="2025-06-29T20:28:11 IST" name="Default suite" finished-at="2025-06-29T20:28:29 IST" duration-ms="18737">
 >>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
 >>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
+=======
+  <suite started-at="2025-06-29T22:40:51 IST" name="Default suite" finished-at="2025-06-29T22:41:07 IST" duration-ms="15557">
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
     <groups>
     </groups>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <test started-at="2025-06-29T22:00:19 IST" name="Default test" finished-at="2025-06-29T22:02:31 IST" duration-ms="131215">
 =======
@@ -30,7 +39,11 @@
     <test started-at="2025-06-29T20:28:11 IST" name="Default test" finished-at="2025-06-29T20:28:29 IST" duration-ms="18737">
 >>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
 >>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
+=======
+    <test started-at="2025-06-29T22:40:51 IST" name="Default test" finished-at="2025-06-29T22:41:07 IST" duration-ms="15557">
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
       <class name="tests.TestScripts">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.TestScripts@367ffa75]" started-at="2025-06-29T22:00:20 IST" name="setUp" finished-at="2025-06-29T22:00:24 IST" duration-ms="4768" status="PASS">
 =======
@@ -39,6 +52,9 @@
 =======
         <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.TestScripts@5dda768f]" started-at="2025-06-29T20:28:11 IST" name="setUp" finished-at="2025-06-29T20:28:16 IST" duration-ms="5577" status="PASS">
 >>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
+=======
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.TestScripts@3a52dba3]" started-at="2025-06-29T22:40:51 IST" name="setUp" finished-at="2025-06-29T22:41:00 IST" duration-ms="8779" status="PASS">
 >>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
           <params>
             <param index="0">
@@ -51,6 +67,7 @@
           </reporter-output>
         </test-method> <!-- setUp -->
 <<<<<<< HEAD
+<<<<<<< HEAD
         <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@367ffa75]" started-at="2025-06-29T22:00:24 IST" name="setUpPagesAndUtils" finished-at="2025-06-29T22:00:24 IST" duration-ms="79" status="PASS">
 =======
 <<<<<<< HEAD
@@ -59,9 +76,13 @@
         <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@5dda768f]" started-at="2025-06-29T20:28:17 IST" name="setUpPagesAndUtils" finished-at="2025-06-29T20:28:17 IST" duration-ms="53" status="PASS">
 >>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
 >>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
+=======
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@3a52dba3]" started-at="2025-06-29T22:41:00 IST" name="setUpPagesAndUtils" finished-at="2025-06-29T22:41:00 IST" duration-ms="184" status="PASS">
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPagesAndUtils -->
+<<<<<<< HEAD
 <<<<<<< HEAD
         <test-method signature="Doctor()[pri:6, instance:tests.TestScripts@367ffa75]" started-at="2025-06-29T22:00:24 IST" name="Doctor" finished-at="2025-06-29T22:00:40 IST" duration-ms="15749" status="FAIL">
           <exception class="java.lang.AssertionError">
@@ -121,8 +142,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
             </param>
           </params>
 >>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
+=======
+        <test-method signature="validateResetButton()[pri:7, instance:tests.TestScripts@3a52dba3]" started-at="2025-06-29T22:41:00 IST" name="validateResetButton" finished-at="2025-06-29T22:41:03 IST" duration-ms="2674" status="PASS">
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
 <<<<<<< HEAD
         </test-method> <!-- Doctor -->
         <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@367ffa75]" started-at="2025-06-29T22:00:40 IST" name="setUpPagesAndUtils" finished-at="2025-06-29T22:00:40 IST" duration-ms="2" status="PASS">
@@ -676,6 +701,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
         </test-method> <!-- setUpPagesAndUtils -->
         <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TestScripts@5dda768f]" started-at="2025-06-29T20:28:26 IST" name="tearDown" finished-at="2025-06-29T20:28:29 IST" duration-ms="3103" status="PASS">
 >>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
+=======
+        </test-method> <!-- validateResetButton -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TestScripts@3a52dba3]" started-at="2025-06-29T22:41:03 IST" name="tearDown" finished-at="2025-06-29T22:41:07 IST" duration-ms="3657" status="PASS">
 >>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
           <reporter-output>
           </reporter-output>

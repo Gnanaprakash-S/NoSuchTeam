@@ -58,6 +58,8 @@ public class HomePage {
 	@FindBy(xpath="//button[@class=\"btn btn-reset\"]")
 	WebElement reset;
 	
+	@FindBy(xpath = "//div[@id=\"scoreCard\"]/div[2]/button")
+	WebElement resetButton;
 	
 	public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -226,6 +228,7 @@ public class HomePage {
     		return false;
     	}
     }
+
      
     public void consultDoctor() throws FileNotFoundException, IOException 
     {
@@ -338,4 +341,24 @@ public class HomePage {
 
 
 
+
+    public void clickReset() {
+        resetButton.click();
+    }
+    
+    @SuppressWarnings("deprecation")
+	public String getFieldValue(WebElement element) {
+        return element.getAttribute("value").trim();
+    }
+    
+    public boolean areFieldsCleared() {
+        return getFieldValue(name).isEmpty() && getFieldValue(age).isEmpty() &&
+               new Select(pulse).getFirstSelectedOption().getText().contains("Select") &&
+               getFieldValue(systolic).isEmpty() &&
+               getFieldValue(diastolic).isEmpty();
+    }
+ 
+
 }
+
+
