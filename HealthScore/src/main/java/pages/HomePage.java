@@ -139,8 +139,5 @@ public class HomePage {
     	return verify(name);
     }
     
-    public void main() {
-    	
-    }
 
 }
