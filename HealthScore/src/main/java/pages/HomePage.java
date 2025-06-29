@@ -64,6 +64,8 @@ public class HomePage {
     }
 
     public Boolean ageField(String nameInput,String ageInput) {
+    	name.clear();
+    	age.clear();
     	name.sendKeys(nameInput);
     	age.sendKeys(ageInput);
     	confirm.click();
@@ -85,7 +87,6 @@ public class HomePage {
     		}
     	}
     	Assert.assertTrue(found,bpmInput+" is not present in the option List.");
-    	System.out.println(bpmInput+" is present in the option List.");
     	sel.selectByVisibleText(bpmInput);
     	confirm.click();
 
@@ -96,7 +97,6 @@ public class HomePage {
     public Boolean systolicBP(String nameInput,String ageInput, String bpmInput, String systolicBPInput) {
     	name.clear();
     	age.clear();
-    	pulse.clear();
     	systolic.clear();
     	name.sendKeys(nameInput);
     	age.sendKeys(ageInput);
@@ -111,7 +111,6 @@ public class HomePage {
     public Boolean diastolicBP(String nameInput,String ageInput, String bpmInput, String systolicBPInput, String diastolicBPInput) {
     	name.clear();
     	age.clear();
-    	pulse.clear();
     	systolic.clear();
     	diastolic.clear();
     	name.sendKeys(nameInput);
@@ -130,7 +129,6 @@ public class HomePage {
     public void withAllValid(String nameInput,String ageInput, String bpmInput, String systolicBPInput, String diastolicBPInput) {
     	name.clear();
     	age.clear();
-    	pulse.clear();
     	systolic.clear();
     	diastolic.clear();
     	name.sendKeys(nameInput);
@@ -146,8 +144,7 @@ public class HomePage {
     	name.clear();
     	age.clear();
     	Select sel = new Select(pulse);
-    	sel.deselectAll();
-    	pulse.clear();
+    	sel.selectByIndex(0);
     	systolic.clear();
     	diastolic.clear();
     	confirm.click();

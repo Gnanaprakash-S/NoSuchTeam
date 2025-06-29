@@ -8,7 +8,7 @@
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="setUpPagesAndUtils"/>
-          <include name="validateName" invocation-numbers="0"/>
+          <include name="validateCalculate"/>
         </methods>
       </class> <!-- tests.TestScripts -->
     </classes>
