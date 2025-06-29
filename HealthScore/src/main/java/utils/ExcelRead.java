@@ -18,8 +18,7 @@ public class ExcelRead {
 	public String filename;
 	public String sheetName;
 	public int start_Row;
-
-	public int row_End;
+	public int row_End=-1;
 
 	//Constructor
 	public ExcelRead(String filename, String sheetName, int start_Row, int row_End) {
@@ -27,6 +26,11 @@ public class ExcelRead {
 		this.sheetName=sheetName;
 		this.start_Row=start_Row;
 		this.row_End=row_End;
+	}
+	public ExcelRead(String filename, String sheetName, int start_Row) {
+		this.filename = filename;
+		this.sheetName=sheetName;
+		this.start_Row=start_Row;
 	}
 	
 	//Reading Excel Sheet
@@ -37,6 +41,10 @@ public class ExcelRead {
 		int col_num = sheet.getRow(1).getLastCellNum();
 		int dataRowCount = 0;
 		
+		if(row_End==-1)
+		{
+			row_End=sheet.getPhysicalNumberOfRows();
+		}
 
 	    for (int i = start_Row; i <= row_End; i++) {
 	        if (sheet.getRow(i) != null) dataRowCount++;

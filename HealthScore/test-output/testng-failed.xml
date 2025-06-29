@@ -5,20 +5,10 @@
     <classes>
       <class name="tests.TestScripts">
         <methods>
-          <include name="Success"/>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="setUpPagesAndUtils"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <include name="Doctor"/>
-          <include name="Range"/>
-=======
-          <include name="validateDiastolic" invocation-numbers="4 5 6"/>
->>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
-=======
-          <include name="validateHealthRemark"/>
->>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
+          <include name="validateResetButton"/>
         </methods>
       </class> <!-- tests.TestScripts -->
     </classes>

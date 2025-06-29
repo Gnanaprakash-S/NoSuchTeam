@@ -58,8 +58,8 @@ public class HomePage {
 	@FindBy(xpath="//button[@class=\"btn btn-reset\"]")
 	WebElement reset;
 	
-	@FindBy(xpath = "//div[@id=\"scoreCard\"]/div[2]/button")
-	WebElement resetButton;
+//	@FindBy(xpath = "//div[@id=\"scoreCard\"]/div[2]/button")
+//	WebElement resetButton;
 	
 	public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -148,10 +148,7 @@ public class HomePage {
 
 
     public void withAllValid(String nameInput,String ageInput, String bpmInput, String systolicBPInput, String diastolicBPInput) {
-    	if(reset.isDisplayed())
-    	{
-    		reset.click();
-    	}
+    	clickReset();
     	name.clear();
     	age.clear();
     	systolic.clear();
@@ -165,7 +162,7 @@ public class HomePage {
     	confirm.click();
     }
   
-    public Boolean clickCalculate() {
+    public Boolean calculateWithoutMandatory() {
     	name.clear();
     	age.clear();
     	Select sel = new Select(pulse);
@@ -207,143 +204,85 @@ public class HomePage {
     		return false;
     	}
     }
-    
-    public boolean isAlertPresent()
-    {
-    	try 
-    	{
-    		Alert alert=driver.switchTo().alert();
-    		return true;
-    	}
-    	catch(Exception e){
-    		return false;
-    	}
-    }
-    
+  
     public boolean isResultPresent()
     {
-    	try {
-    		return resultBox.isDisplayed();
-    	}catch(NoAlertPresentException e){
+    	if(scoreCard()=="none")
     		return false;
+    	else
+    		return true;
+    }
+    public String scoreCard()
+    {
+    	try {
+    		return resultBox.getCssValue("display");
+    	}catch(NoAlertPresentException e){
+    		return " ";
     	}
     }
 
-     
-    public void consultDoctor() throws FileNotFoundException, IOException 
+    public String[][] getTestData(String sheetName) throws FileNotFoundException, IOException 
     {
-    	ExcelRead excelData = new ExcelRead(System.getProperty("user.dir") + "/src/Resources/Updated_Final_Tests1.xlsx", "Consult_Doctor",1);
-	    String[][] data = excelData.readExcelOperation();
+    	ExcelRead excelData = new ExcelRead(System.getProperty("user.dir") + "/src/Resources/Updated_Final_Tests 2 (3).xlsx", sheetName,1);
+	    return excelData.readExcelOperation();
+    }
+    
+    public void consultDoctor(String sheetName) throws FileNotFoundException, IOException
+    {
+    	String[][] data = getTestData(sheetName);
         int row = data.length;
-        int col = data[0].length;
-
 
 	    for(int i=0;i<row;i++)
 	    {
-	    	name.clear();
-	    	age.clear();
-	    	systolic.clear();
-	    	diastolic.clear();
-	    	name.sendKeys("Prakash");
-        	age.sendKeys("18");
-        	Select sel = new Select(pulse);
-        	sel.selectByVisibleText(data[i][3]);
-        	systolic.sendKeys(data[i][0]);
-        	diastolic.sendKeys(data[i][1]);
-        	confirm.click();	
+	    	withAllValid("Prakash", "18", data[i][3],data[i][0],data[i][1]);	
         	if(!isAlertPresent("Consult a Doctor"))
         	{
-        		System.out.println("Systolic BP : "+data[i][0]+"  Diastolic BP : "+data[i][1]+"  Pulse BP :"+data[i][3]+"  --NOT WORKING");
-        		Assert.fail();
+        		Assert.fail("Systolic BP : "+data[i][0]+"  Diastolic BP : "+data[i][1]+"  Pulse BP :"+data[i][3]+"Alert not generated to consult a doctor");
         		break;
         	}
 	    }
     }
     
-    public void notInRange() throws FileNotFoundException, IOException 
-    {
-    	ExcelRead excelData = new ExcelRead(System.getProperty("user.dir") + "/src/Resources/Updated_Final_Tests1.xlsx", "Not_In_Range",1);
-	    String[][] data = excelData.readExcelOperation();
+    public void notInRange(String sheetName) throws FileNotFoundException, IOException 
+     { 
+	    String[][] data = getTestData(sheetName);
         int row = data.length;
-        int col = data[0].length;
 
 	    for(int i=0;i<row;i++)
-	    {
-	    	name.clear();
-	    	age.clear();
-	    	systolic.clear();
-	    	diastolic.clear();
-	    	name.sendKeys("Prakash");
-        	age.sendKeys("18");
-        	Select sel = new Select(pulse);
-        	sel.selectByVisibleText(data[i][3]);
-        	systolic.sendKeys(data[i][0]);
-        	diastolic.sendKeys(data[i][1]);
-        	confirm.click();	
+	    {   
+	    	withAllValid("Prakash", "18", data[i][3],data[i][0],data[i][1]);		
         	if(!isAlertPresent("Not Valid"))
         	{
-        		System.out.println("Systolic BP : "+data[i][0]+"  Diastolic BP : "+data[i][1]+"  Pulse BP :"+data[i][3]+"  --NOT WORKING");
-        		Assert.fail();
+        		Assert.fail("Systolic BP : "+data[i][0]+"  Diastolic BP : "+data[i][1]+"  Pulse BP :"+data[i][3]+" Alert not generated for BP values not in range");
         		break;
         	}
 	    }
     }
     
-    public void success() throws FileNotFoundException, IOException 
+    public void success(String sheetName) throws FileNotFoundException, IOException 
     {
-    	ExcelRead excelData = new ExcelRead(System.getProperty("user.dir") + "/src/Resources/Updated_Final_Tests1.xlsx", "Success",1);
-	    String[][] data = excelData.readExcelOperation();
+	    String[][] data = getTestData(sheetName);
         int row = data.length;
-        int col = data[0].length;
 
 	    for(int i=0;i<row;i++)
 	    {
-	    	name.clear();
-	    	age.clear();
-	    	systolic.clear();
-	    	diastolic.clear();
-	    	name.sendKeys("Prakash");
-        	age.sendKeys("18");
-        	Select sel = new Select(pulse);
-        	sel.selectByVisibleText(data[i][3]);
-        	systolic.sendKeys(data[i][0]);
-        	diastolic.sendKeys(data[i][1]);
-        	confirm.click();	
+	    	withAllValid("Prakash", "18", data[i][3],data[i][0],data[i][1]);	
         	if(isResultPresent())
         	{
         		driver.navigate().refresh();
         	}
         	else
         	{
-        		System.out.println("Systolic BP : "+data[i][0]+"  Diastolic BP : "+data[i][1]+"  Pulse BP :"+data[i][3]+"  --NOT WORKING");
-        		Assert.fail();
+        		Assert.fail("Systolic BP : "+data[i][0]+"  Diastolic BP : "+data[i][1]+"  Pulse BP :"+data[i][3]+" result not generated alert interrupted");
         		break;
         	}
-//        	if(isAlertPresent())
-//        	{
-//        		System.out.println("Systolic BP : "+data[i][0]+"  Diastolic BP : "+data[i][1]+"  Pulse BP :"+data[i][3]+"  --NOT WORKING");
-//        		Assert.fail();
-//        		break;
-//        	}
-//        	else if(isResultPresent())
-//        	{
-//        		driver.navigate().refresh();
-//        	}
-//        	else
-//        	{
-//        		System.out.println("Systolic BP : "+data[i][0]+"  Diastolic BP : "+data[i][1]+"  Pulse BP :"+data[i][3]+"  --NOT WORKING");
-//        		Assert.fail();
-//        		break;
-//        	}
         	
 	    }
     }
 
-
-
-
     public void clickReset() {
-        resetButton.click();
+    	if(reset.isDisplayed())
+        reset.click();
     }
     
     @SuppressWarnings("deprecation")
