@@ -13,7 +13,7 @@ import org.testng.Assert;
 public class HomePage {
 	
 	WebDriver driver;
-	
+	  
 	@FindBy(id="name")
 	WebElement name;
 	
