@@ -14,23 +14,23 @@ import org.testng.annotations.DataProvider;
 public class ExcelRead {
 	
 	//Data Members
-	public static String [][] data;
-	public static String filename;
-	public static String sheetName;
+	public String [][] data;
+	public String filename;
+	public String sheetName;
 	
 	//Constructor
 	public ExcelRead(String filename, String sheetName) {
-		ExcelRead.filename = filename;
-		ExcelRead.sheetName=sheetName;
+		this.filename = filename;
+		this.sheetName=sheetName;
 	}
 	
 	//Reading Excel Sheet
-	public static String [][] readExcelOperation() throws FileNotFoundException, IOException{
+	public String [][] readExcelOperation() throws FileNotFoundException, IOException{
 		XSSFWorkbook book = new XSSFWorkbook(new FileInputStream(filename));
 		XSSFSheet sheet = book.getSheet(sheetName);
 		DataFormatter format = new DataFormatter();
-		int start_Row=2;
-		int col_num = sheet.getRow(2).getLastCellNum();
+		int start_Row=1;
+		int col_num = sheet.getRow(1).getLastCellNum();
 		int row_num = sheet.getLastRowNum();
 		
 		int dataRowCount = 0;
@@ -57,8 +57,8 @@ public class ExcelRead {
 	}
 
 	//Main Read
-	@DataProvider(name="filereader")
-	public static String[][] read() throws FileNotFoundException, IOException{
-		return readExcelOperation();
-	}
+//	@DataProvider(name="filereader")
+//	public static String[][] read() throws FileNotFoundException, IOException{
+//		return readExcelOperation();
+//	}
 }
