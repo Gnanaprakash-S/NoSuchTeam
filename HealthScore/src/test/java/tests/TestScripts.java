@@ -48,7 +48,7 @@ public class TestScripts extends BaseTest{
 //		homePage.bpmField(data[0],data[1],data[2]);
 
 	}
-	
+	  
 	@Test(priority=3,dataProvider="filereader")
 	public void validateSystolic(String ... data) {
 		Assert.assertTrue(homePage.systolicBP(data[0],data[2],data[4],data[6]),data[6]+" SystolicBP needs to pass but fails.");    	
