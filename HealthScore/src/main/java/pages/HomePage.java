@@ -17,7 +17,7 @@ import org.testng.Assert;
 public class HomePage {
 	
 	WebDriver driver;
-	
+	  
 	@FindBy(id="name")
 	WebElement name;
 	
@@ -153,6 +153,7 @@ public class HomePage {
     	confirm.click();
     	return verify(name);
     }
+
     public boolean isAlertPresent(String expectedText)
     {
     	try {
@@ -173,6 +174,7 @@ public class HomePage {
     		return false;
     	}
     }
+
 
 
 }

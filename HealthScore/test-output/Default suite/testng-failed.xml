@@ -10,8 +10,12 @@
           <include name="tearDown"/>
           <include name="setUpPagesAndUtils"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           <include name="validatePulse" invocation-numbers="0 1 2 3"/>
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
+=======
+          <include name="validateName" invocation-numbers="0"/>
 >>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
         </methods>
       </class> <!-- tests.TestScripts -->

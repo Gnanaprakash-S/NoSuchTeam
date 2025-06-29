@@ -1,14 +1,30 @@
 <<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="1" total="4" passed="2" failed="1" skipped="0">
+=======
+<testng-results ignored="5" total="12" passed="6" failed="1" skipped="0">
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2025-06-28T23:51:03 IST" name="Default suite" finished-at="2025-06-28T23:51:17 IST" duration-ms="14027">
+=======
+  <suite started-at="2025-06-29T12:38:19 IST" name="Default suite" finished-at="2025-06-29T12:38:40 IST" duration-ms="20520">
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
     <groups>
     </groups>
+<<<<<<< HEAD
     <test started-at="2025-06-28T23:51:03 IST" name="Default test" finished-at="2025-06-28T23:51:17 IST" duration-ms="14027">
+=======
+    <test started-at="2025-06-29T12:38:19 IST" name="Default test" finished-at="2025-06-29T12:38:40 IST" duration-ms="20520">
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
       <class name="tests.TestScripts">
+<<<<<<< HEAD
         <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.TestScripts@1c1bbc4e]" started-at="2025-06-28T23:51:03 IST" name="setUp" finished-at="2025-06-28T23:51:08 IST" duration-ms="5449" status="PASS">
+=======
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.TestScripts@5dda768f]" started-at="2025-06-29T12:38:19 IST" name="setUp" finished-at="2025-06-29T12:38:26 IST" duration-ms="6689" status="PASS">
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
           <params>
             <param index="0">
               <value>
@@ -19,20 +35,33 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@1c1bbc4e]" started-at="2025-06-28T23:51:10 IST" name="setUpPagesAndUtils" finished-at="2025-06-28T23:51:10 IST" duration-ms="51" status="PASS">
+=======
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@5dda768f]" started-at="2025-06-29T12:38:28 IST" name="setUpPagesAndUtils" finished-at="2025-06-29T12:38:28 IST" duration-ms="70" status="PASS">
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPagesAndUtils -->
+<<<<<<< HEAD
         <test-method signature="validateNameField([Ljava.lang.String;)[pri:0, instance:tests.TestScripts@1c1bbc4e]" started-at="2025-06-28T23:51:10 IST" name="validateNameField" data-provider="filereader" finished-at="2025-06-28T23:51:11 IST" duration-ms="1091" status="FAIL">
+=======
+        <test-method signature="validateName([Ljava.lang.String;)[pri:0, instance:tests.TestScripts@5dda768f]" started-at="2025-06-29T12:38:28 IST" name="validateName" data-provider="filereader" finished-at="2025-06-29T12:38:29 IST" duration-ms="1136" status="FAIL">
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
           <params>
             <param index="0">
               <value>
+<<<<<<< HEAD
                 <![CDATA[[Ljava.lang.String;@344426bf]]>
+=======
+                <![CDATA[[Ljava.lang.String;@2c708440]]>
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
+<<<<<<< HEAD
               <![CDATA[Invalid input was accepted  :   expected [false] but found [true]]]>
             </message>
             <full-stacktrace>
@@ -78,32 +107,161 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </reporter-output>
         </test-method> <!-- setUpPagesAndUtils -->
         <test-method signature="validateNameField([Ljava.lang.String;)[pri:0, instance:tests.TestScripts@1c1bbc4e]" started-at="2025-06-28T23:51:11 IST" name="validateNameField" data-provider="filereader" finished-at="2025-06-28T23:51:12 IST" duration-ms="1056" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.String;@10bd9df0]]>
-              </value>
-            </param>
-          </params>
+=======
+              <![CDATA[  it needs to fails but pass. expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError:   it needs to fails but pass. expected [false] but found [true]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertFalse(Assert.java:79)
+at tests.TestScripts.validateName(TestScripts.java:49)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateNameField -->
-        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@1c1bbc4e]" started-at="2025-06-28T23:51:12 IST" name="setUpPagesAndUtils" finished-at="2025-06-28T23:51:12 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- validateName -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@5dda768f]" started-at="2025-06-29T12:38:29 IST" name="setUpPagesAndUtils" finished-at="2025-06-29T12:38:29 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPagesAndUtils -->
-        <test-method signature="validateNameField([Ljava.lang.String;)[pri:0, instance:tests.TestScripts@1c1bbc4e]" started-at="2025-06-28T23:51:12 IST" name="validateNameField" data-provider="filereader" finished-at="2025-06-28T23:51:13 IST" duration-ms="1246" status="PASS">
+        <test-method signature="validateName([Ljava.lang.String;)[pri:0, instance:tests.TestScripts@5dda768f]" started-at="2025-06-29T12:38:29 IST" name="validateName" data-provider="filereader" finished-at="2025-06-29T12:38:30 IST" duration-ms="922" status="PASS">
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@3ae0b770]]>
+<<<<<<< HEAD
+                <![CDATA[[Ljava.lang.String;@10bd9df0]]>
+=======
+                <![CDATA[[Ljava.lang.String;@2ba5aa7a]]>
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
+        </test-method> <!-- validateNameField -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@1c1bbc4e]" started-at="2025-06-28T23:51:12 IST" name="setUpPagesAndUtils" finished-at="2025-06-28T23:51:12 IST" duration-ms="1" status="PASS">
+=======
+        </test-method> <!-- validateName -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@5dda768f]" started-at="2025-06-29T12:38:30 IST" name="setUpPagesAndUtils" finished-at="2025-06-29T12:38:30 IST" duration-ms="5" status="PASS">
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+<<<<<<< HEAD
+        <test-method signature="validateNameField([Ljava.lang.String;)[pri:0, instance:tests.TestScripts@1c1bbc4e]" started-at="2025-06-28T23:51:12 IST" name="validateNameField" data-provider="filereader" finished-at="2025-06-28T23:51:13 IST" duration-ms="1246" status="PASS">
+=======
+        <test-method signature="validateName([Ljava.lang.String;)[pri:0, instance:tests.TestScripts@5dda768f]" started-at="2025-06-29T12:38:30 IST" name="validateName" data-provider="filereader" finished-at="2025-06-29T12:38:31 IST" duration-ms="1115" status="PASS">
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
+          <params>
+            <param index="0">
+              <value>
+<<<<<<< HEAD
+                <![CDATA[[Ljava.lang.String;@3ae0b770]]>
+=======
+                <![CDATA[[Ljava.lang.String;@6c931d35]]>
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- validateNameField -->
         <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TestScripts@1c1bbc4e]" started-at="2025-06-28T23:51:13 IST" name="tearDown" finished-at="2025-06-28T23:51:17 IST" duration-ms="3619" status="PASS">
+=======
+        </test-method> <!-- validateName -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@5dda768f]" started-at="2025-06-29T12:38:31 IST" name="setUpPagesAndUtils" finished-at="2025-06-29T12:38:31 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateName([Ljava.lang.String;)[pri:0, instance:tests.TestScripts@5dda768f]" started-at="2025-06-29T12:38:31 IST" name="validateName" data-provider="filereader" finished-at="2025-06-29T12:38:32 IST" duration-ms="994" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@4d3ca6c7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateName -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@5dda768f]" started-at="2025-06-29T12:38:32 IST" name="setUpPagesAndUtils" finished-at="2025-06-29T12:38:32 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateName([Ljava.lang.String;)[pri:0, instance:tests.TestScripts@5dda768f]" started-at="2025-06-29T12:38:32 IST" name="validateName" data-provider="filereader" finished-at="2025-06-29T12:38:33 IST" duration-ms="971" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@22e5f96e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateName -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@5dda768f]" started-at="2025-06-29T12:38:33 IST" name="setUpPagesAndUtils" finished-at="2025-06-29T12:38:33 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateName([Ljava.lang.String;)[pri:0, instance:tests.TestScripts@5dda768f]" started-at="2025-06-29T12:38:33 IST" name="validateName" data-provider="filereader" finished-at="2025-06-29T12:38:34 IST" duration-ms="916" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@44b194fe]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateName -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@5dda768f]" started-at="2025-06-29T12:38:34 IST" name="setUpPagesAndUtils" finished-at="2025-06-29T12:38:34 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateName([Ljava.lang.String;)[pri:0, instance:tests.TestScripts@5dda768f]" started-at="2025-06-29T12:38:34 IST" name="validateName" data-provider="filereader" finished-at="2025-06-29T12:38:35 IST" duration-ms="923" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@6a638c79]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TestScripts@5dda768f]" started-at="2025-06-29T12:38:35 IST" name="tearDown" finished-at="2025-06-29T12:38:40 IST" duration-ms="5098" status="PASS">
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
