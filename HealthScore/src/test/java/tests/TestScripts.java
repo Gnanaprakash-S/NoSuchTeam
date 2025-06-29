@@ -25,7 +25,7 @@ public class TestScripts extends BaseTest{
 
 	@DataProvider(name="filereader")
 	public static String[][] read() throws IOException {
-		ExcelRead excelData = new ExcelRead(System.getProperty("user.dir") + "/src/Resources/Updated_Final_Tests 2.xlsx", "Test",2);
+		ExcelRead excelData = new ExcelRead(System.getProperty("user.dir") + "/src/Resources/Updated_Final_Tests 2 (2).xlsx", "Test",2,8);
 	    return excelData.readExcelOperation();
 	}
 
@@ -43,23 +43,24 @@ public class TestScripts extends BaseTest{
 	
 	@Test(priority=2,dataProvider="filereader")
 	public void validatePulse(String ... data) {
-		homePage.bpmField(data[0],data[2],data[4]);
+		Assert.assertTrue(homePage.bpmField(data[0],data[2],data[4]),data[4]+" Pulse needs to pass but fails."); 
+		Assert.assertFalse(homePage.bpmField(data[0],data[2],"Select Pulse Range"),"Select Pulse Range"+" Pulse needs to pass but fails."); 
 //		homePage.bpmField(data[0],data[1],data[2]);
 
 	}
 	
 	@Test(priority=3,dataProvider="filereader")
 	public void validateSystolic(String ... data) {
-		Assert.assertTrue(homePage.systolicBP(data[0],data[2],data[4],data[5]),data[5]+" SystolicBP needs to pass but fails.");    	
-    	Assert.assertFalse(homePage.systolicBP(data[0],data[2],data[4],data[6]),data[6]+" SystolicBP needs to fails but pass.");
+		Assert.assertTrue(homePage.systolicBP(data[0],data[2],data[4],data[6]),data[6]+" SystolicBP needs to pass but fails.");    	
+    	Assert.assertFalse(homePage.systolicBP(data[0],data[2],data[4],data[7]),data[7]+" SystolicBP needs to fails but pass.");
 
 	}
 
 
 	@Test(priority=4,dataProvider="filereader")
 	public void validateDiastolic(String ... data) {
-		Assert.assertTrue(homePage.diastolicBP(data[0],data[2],data[4],data[5],data[7]),data[7]+" DiastolicBP needs to pass but fails.");    	
-    	Assert.assertFalse(homePage.diastolicBP(data[0],data[2],data[4],data[6],data[8]),data[8]+" DiastolicBP needs to fails but pass.");
+		Assert.assertTrue(homePage.diastolicBP(data[0],data[2],data[4],data[6],data[8]),data[8]+" DiastolicBP needs to pass but fails.");    	
+    	Assert.assertFalse(homePage.diastolicBP(data[0],data[2],data[4],data[6],data[9]),data[9]+" DiastolicBP needs to fails but pass.");
 	}
 	
 	@Test(priority=5)

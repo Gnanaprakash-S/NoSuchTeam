@@ -72,7 +72,7 @@ public class HomePage {
     	return verify(age);    	
     }
     
-    public void bpmField(String nameInput,String ageInput, String bpmInput) {
+    public Boolean bpmField(String nameInput,String ageInput, String bpmInput) {
     	name.clear();
     	age.clear();
     	name.sendKeys(nameInput);
@@ -90,7 +90,7 @@ public class HomePage {
     	sel.selectByVisibleText(bpmInput);
     	confirm.click();
 
-    	verify(pulse);
+    	return verify(pulse);
 
     }
     
