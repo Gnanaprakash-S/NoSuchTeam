@@ -79,7 +79,7 @@ public class TestScripts extends BaseTest{
     	System.out.println("It's not submitting without the mandatory fields as EXPECTED"); 
 	} 
 	
-	public void main() {
+	public void main_hello() {
 		
 	}
 	
