@@ -42,9 +42,13 @@ public class TestScripts extends BaseTest{
 	
 	@Test(priority=2,dataProvider="filereader")
 	public void validatePulse(String ... data) {
-		homePage.bpmField(data[0],data[2],data[4]);
+
+		Assert.assertTrue(homePage.bpmField(data[0],data[2],data[4]),data[4]+" Pulse needs to pass but fails."); 
+		Assert.assertFalse(homePage.bpmField(data[0],data[2],"Select Pulse Range"),"Select Pulse Range"+" Pulse needs to pass but fails."); 
+
+
 	}
-	
+	  
 	@Test(priority=3,dataProvider="filereader")
 	public void validateSystolic(String ... data) {
 		Assert.assertTrue(homePage.systolicBP(data[0],data[2],data[4],data[6]),data[6]+" SystolicBP needs to pass but fails.");    	
@@ -68,7 +72,7 @@ public class TestScripts extends BaseTest{
 	public static String[][] readScore() throws IOException {
 		ExcelRead excelData = new ExcelRead(System.getProperty("user.dir") + "/src/Resources/Updated_Final_Tests 2 (2).xlsx", "Test",2,15);
 	    return excelData.readExcelOperation();
-	}  
+	}    
 	
 	@Test(priority=6,dataProvider="filereaderScore")
 	public void validateScoresGenerated(String...data)
