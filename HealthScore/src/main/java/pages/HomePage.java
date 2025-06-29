@@ -123,6 +123,22 @@ public class HomePage {
     	
     	return verify(diastolic);
     }
+    
+    public void withAllValid(String nameInput,String ageInput, String bpmInput, String systolicBPInput, String diastolicBPInput) {
+    	name.clear();
+    	age.clear();
+    	pulse.clear();
+    	systolic.clear();
+    	diastolic.clear();
+    	name.sendKeys(nameInput);
+    	age.sendKeys(ageInput);
+    	Select sel = new Select(pulse);
+    	sel.selectByVisibleText(bpmInput);
+    	systolic.sendKeys(systolicBPInput);
+    	diastolic.sendKeys(diastolicBPInput);
+    	confirm.click();
+    }
+    
     public Boolean clickCalculate() {
     	name.clear();
     	age.clear();
@@ -135,6 +151,6 @@ public class HomePage {
     	return verify(name);
     }
     
-    
+
 
 }
