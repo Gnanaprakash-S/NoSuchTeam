@@ -17,7 +17,7 @@ public class TestScripts extends BaseTest{
 	
 	HomePage homePage;
 
-	@BeforeMethod 
+	@BeforeMethod   
 	public void setUpPagesAndUtils()
 	{
 		homePage = new HomePage(driver);
