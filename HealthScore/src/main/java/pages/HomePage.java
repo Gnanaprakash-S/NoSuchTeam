@@ -84,7 +84,7 @@ public class HomePage {
     	name.sendKeys(nameInput);
     	age.sendKeys(ageInput);
     	confirm.click();
-    	return verify(age);    	
+    	return verify(age);     	
     }
     
     public void bpmField(String nameInput,String ageInput, String bpmInput) {

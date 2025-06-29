@@ -52,7 +52,6 @@ public class TestScripts extends BaseTest{
 
 	}
 
-
 	@Test(priority=4,dataProvider="filereader")
 	public void validateDiastolic(String ... data) {
 		Assert.assertTrue(homePage.diastolicBP(data[0],data[2],data[4],data[6],data[8]),data[8]+" DiastolicBP needs to pass but fails.");    	
