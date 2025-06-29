@@ -13,7 +13,7 @@ import org.testng.Assert;
 public class HomePage {
 	
 	WebDriver driver;
-	
+	  
 	@FindBy(id="name")
 	WebElement name;
 	
@@ -151,6 +151,9 @@ public class HomePage {
     	return verify(name);
     }
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
 
 }

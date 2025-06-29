@@ -13,8 +13,8 @@ import pages.HomePage;
 import utils.ExcelRead;
 
 
-public class TestScripts extends BaseTest{
-	
+public class TestScripts extends BaseTest
+{	
 	HomePage homePage;
 
 	@BeforeMethod
@@ -96,6 +96,7 @@ public class TestScripts extends BaseTest{
     	System.out.println("It's not submitting without the mandatory fields as EXPECTED"); 
 	} 
 	
+	     
 
 
 }
