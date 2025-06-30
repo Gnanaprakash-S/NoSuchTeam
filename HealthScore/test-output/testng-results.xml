@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="11" total="12" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="68" passed="53" failed="15" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-30T01:22:55 IST" name="Default suite" finished-at="2025-06-30T01:23:06 IST" duration-ms="10299">
+  <suite started-at="2025-06-30T10:40:23 IST" name="Default suite" finished-at="2025-06-30T10:48:15 IST" duration-ms="471919">
     <groups>
     </groups>
-    <test started-at="2025-06-30T01:22:55 IST" name="Default test" finished-at="2025-06-30T01:23:06 IST" duration-ms="10299">
+    <test started-at="2025-06-30T10:40:23 IST" name="Default test" finished-at="2025-06-30T10:48:15 IST" duration-ms="471919">
       <class name="tests.TestScripts">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.TestScripts@279fedbd]" started-at="2025-06-30T01:22:55 IST" name="setUp" finished-at="2025-06-30T01:23:01 IST" duration-ms="5882" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:23 IST" name="setUp" finished-at="2025-06-30T10:40:30 IST" duration-ms="6716" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,1579 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@279fedbd]" started-at="2025-06-30T01:23:01 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T01:23:01 IST" duration-ms="80" status="PASS">
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:31 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:31 IST" duration-ms="65" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPagesAndUtils -->
-        <test-method signature="validateResetButton()[pri:11, instance:tests.TestScripts@279fedbd]" started-at="2025-06-30T01:23:01 IST" name="validateResetButton" finished-at="2025-06-30T01:23:03 IST" duration-ms="1506" status="FAIL">
+        <test-method signature="validateName([Ljava.lang.String;)[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:31 IST" name="validateName" data-provider="filereader" finished-at="2025-06-30T10:40:32 IST" duration-ms="653" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@6bda1d19]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[  Name needs to fails but pass. expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError:   Name needs to fails but pass. expected [false] but found [true]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertFalse(Assert.java:79)
+at tests.TestScripts.validateName(TestScripts.java:51)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateName -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:32 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:32 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateName([Ljava.lang.String;)[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:32 IST" name="validateName" data-provider="filereader" finished-at="2025-06-30T10:40:33 IST" duration-ms="647" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@703917d1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateName -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:33 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:33 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateName([Ljava.lang.String;)[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:33 IST" name="validateName" data-provider="filereader" finished-at="2025-06-30T10:40:33 IST" duration-ms="610" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@181a6636]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateName -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:33 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:33 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateName([Ljava.lang.String;)[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:33 IST" name="validateName" data-provider="filereader" finished-at="2025-06-30T10:40:34 IST" duration-ms="578" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@6d48e0e7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateName -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:34 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:34 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateName([Ljava.lang.String;)[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:34 IST" name="validateName" data-provider="filereader" finished-at="2025-06-30T10:40:35 IST" duration-ms="546" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@5ad7dd21]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateName -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:35 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:35 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateName([Ljava.lang.String;)[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:35 IST" name="validateName" data-provider="filereader" finished-at="2025-06-30T10:40:35 IST" duration-ms="687" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@61a42f0f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateName -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:35 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:35 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateName([Ljava.lang.String;)[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:35 IST" name="validateName" data-provider="filereader" finished-at="2025-06-30T10:40:36 IST" duration-ms="560" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@5783cbe0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateName -->
+        <test-method signature="validateAge([Ljava.lang.String;)[pri:1, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:36 IST" name="validateAge" data-provider="filereader" finished-at="2025-06-30T10:40:37 IST" duration-ms="1381" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@3bf4b402]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAge -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:36 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:36 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:37 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:37 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateAge([Ljava.lang.String;)[pri:1, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:37 IST" name="validateAge" data-provider="filereader" finished-at="2025-06-30T10:40:39 IST" duration-ms="1483" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@ad301b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAge -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:39 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:39 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateAge([Ljava.lang.String;)[pri:1, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:39 IST" name="validateAge" data-provider="filereader" finished-at="2025-06-30T10:40:40 IST" duration-ms="1105" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@1331f0a3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAge -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:40 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:40 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateAge([Ljava.lang.String;)[pri:1, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:40 IST" name="validateAge" data-provider="filereader" finished-at="2025-06-30T10:40:41 IST" duration-ms="1179" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@62b2d61f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAge -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:41 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:41 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateAge([Ljava.lang.String;)[pri:1, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:41 IST" name="validateAge" data-provider="filereader" finished-at="2025-06-30T10:40:42 IST" duration-ms="1077" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@114627cd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAge -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:42 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:42 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateAge([Ljava.lang.String;)[pri:1, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:42 IST" name="validateAge" data-provider="filereader" finished-at="2025-06-30T10:40:43 IST" duration-ms="1225" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@194104bf]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAge -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:43 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:43 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateAge([Ljava.lang.String;)[pri:1, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:43 IST" name="validateAge" data-provider="filereader" finished-at="2025-06-30T10:40:45 IST" duration-ms="1162" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@6ae5596]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAge -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:45 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:45 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validatePulse([Ljava.lang.String;)[pri:2, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:45 IST" name="validatePulse" data-provider="filereader" finished-at="2025-06-30T10:40:47 IST" duration-ms="1781" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@2ac031af]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePulse -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:47 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:47 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validatePulse([Ljava.lang.String;)[pri:2, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:47 IST" name="validatePulse" data-provider="filereader" finished-at="2025-06-30T10:40:48 IST" duration-ms="1732" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@59dd84dc]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePulse -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:48 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:48 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validatePulse([Ljava.lang.String;)[pri:2, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:48 IST" name="validatePulse" data-provider="filereader" finished-at="2025-06-30T10:40:50 IST" duration-ms="1926" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@58940b17]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePulse -->
+        <test-method signature="validatePulse([Ljava.lang.String;)[pri:2, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:50 IST" name="validatePulse" data-provider="filereader" finished-at="2025-06-30T10:40:52 IST" duration-ms="1876" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@37b15f4d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePulse -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:50 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:50 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:52 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:52 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validatePulse([Ljava.lang.String;)[pri:2, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:52 IST" name="validatePulse" data-provider="filereader" finished-at="2025-06-30T10:40:54 IST" duration-ms="2056" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@33dfad1b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePulse -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:54 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:54 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validatePulse([Ljava.lang.String;)[pri:2, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:54 IST" name="validatePulse" data-provider="filereader" finished-at="2025-06-30T10:40:56 IST" duration-ms="1848" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@5969308]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePulse -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:56 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:56 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validatePulse([Ljava.lang.String;)[pri:2, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:56 IST" name="validatePulse" data-provider="filereader" finished-at="2025-06-30T10:40:58 IST" duration-ms="1801" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@23e5102d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePulse -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:58 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:58 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateSystolic([Ljava.lang.String;)[pri:3, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:40:58 IST" name="validateSystolic" data-provider="filereader" finished-at="2025-06-30T10:41:00 IST" duration-ms="1855" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@382dca53]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSystolic -->
+        <test-method signature="validateSystolic([Ljava.lang.String;)[pri:3, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:00 IST" name="validateSystolic" data-provider="filereader" finished-at="2025-06-30T10:41:02 IST" duration-ms="2126" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@7e08daa2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSystolic -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:00 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:00 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:02 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:02 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateSystolic([Ljava.lang.String;)[pri:3, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:02 IST" name="validateSystolic" data-provider="filereader" finished-at="2025-06-30T10:41:04 IST" duration-ms="2302" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@41fb43cc]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSystolic -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:04 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:04 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateSystolic([Ljava.lang.String;)[pri:3, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:04 IST" name="validateSystolic" data-provider="filereader" finished-at="2025-06-30T10:41:06 IST" duration-ms="2021" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@508ed19e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSystolic -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:06 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:06 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateSystolic([Ljava.lang.String;)[pri:3, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:06 IST" name="validateSystolic" data-provider="filereader" finished-at="2025-06-30T10:41:08 IST" duration-ms="2074" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@7de6462f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSystolic -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:08 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:08 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateSystolic([Ljava.lang.String;)[pri:3, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:08 IST" name="validateSystolic" data-provider="filereader" finished-at="2025-06-30T10:41:09 IST" duration-ms="845" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@1aaaabd1]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[130 SystolicBP needs to pass but fails. expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 130 SystolicBP needs to pass but fails. expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at tests.TestScripts.validateSystolic(TestScripts.java:69)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSystolic -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:09 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateSystolic([Ljava.lang.String;)[pri:3, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:09 IST" name="validateSystolic" data-provider="filereader" finished-at="2025-06-30T10:41:10 IST" duration-ms="1117" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@7e1fb22c]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[131 SystolicBP needs to pass but fails. expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 131 SystolicBP needs to pass but fails. expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at tests.TestScripts.validateSystolic(TestScripts.java:69)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSystolic -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:11 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:11 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateDiastolic([Ljava.lang.String;)[pri:4, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:11 IST" name="validateDiastolic" data-provider="filereader" finished-at="2025-06-30T10:41:13 IST" duration-ms="2424" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@193ecff1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDiastolic -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:13 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:13 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateDiastolic([Ljava.lang.String;)[pri:4, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:13 IST" name="validateDiastolic" data-provider="filereader" finished-at="2025-06-30T10:41:15 IST" duration-ms="2140" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@33d33d3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDiastolic -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:15 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:15 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateDiastolic([Ljava.lang.String;)[pri:4, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:15 IST" name="validateDiastolic" data-provider="filereader" finished-at="2025-06-30T10:41:18 IST" duration-ms="2770" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@60c2261c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDiastolic -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:18 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:18 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateDiastolic([Ljava.lang.String;)[pri:4, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:18 IST" name="validateDiastolic" data-provider="filereader" finished-at="2025-06-30T10:41:21 IST" duration-ms="2667" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@493a8376]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDiastolic -->
+        <test-method signature="validateDiastolic([Ljava.lang.String;)[pri:4, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:21 IST" name="validateDiastolic" data-provider="filereader" finished-at="2025-06-30T10:41:23 IST" duration-ms="2385" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@3f2ab6ec]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.UnhandledAlertException">
+            <message>
+              <![CDATA[unexpected alert open: {Alert text : Provided BP values are not valid. Please Check Once Again}
+  (Session info: chrome=137.0.7151.69): Provided BP values are not valid. Please Check Once Again
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6dbf9f085bc5caa7a092879eaa5a52c8, findElement {value=bp-diastolic, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2401015\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61475}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61475/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6dbf9f085bc5caa7a092879eaa5a52c8]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Provided BP values are not valid. Please Check Once Again}
+  (Session info: chrome=137.0.7151.69): Provided BP values are not valid. Please Check Once Again
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6dbf9f085bc5caa7a092879eaa5a52c8, findElement {value=bp-diastolic, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2401015\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61475}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61475/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6dbf9f085bc5caa7a092879eaa5a52c8
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy20.getWrappedElement(Unknown Source)
+at org.openqa.selenium.remote.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:48)
+at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:474)
+at pages.HomePage.verify(HomePage.java:74)
+at pages.HomePage.diastolicBP(HomePage.java:145)
+at tests.TestScripts.validateDiastolic(TestScripts.java:77)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.UnhandledAlertException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDiastolic -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:21 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:21 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:23 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:23 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateDiastolic([Ljava.lang.String;)[pri:4, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:23 IST" name="validateDiastolic" data-provider="filereader" finished-at="2025-06-30T10:41:26 IST" duration-ms="2553" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@1d6014a7]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[101 DiastolicBP needs to fails but pass. expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 101 DiastolicBP needs to fails but pass. expected [false] but found [true]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertFalse(Assert.java:79)
+at tests.TestScripts.validateDiastolic(TestScripts.java:77)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDiastolic -->
+        <test-method signature="validateDiastolic([Ljava.lang.String;)[pri:4, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:26 IST" name="validateDiastolic" data-provider="filereader" finished-at="2025-06-30T10:41:29 IST" duration-ms="2910" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@5ed88e31]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[150 DiastolicBP needs to fails but pass. expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 150 DiastolicBP needs to fails but pass. expected [false] but found [true]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertFalse(Assert.java:79)
+at tests.TestScripts.validateDiastolic(TestScripts.java:77)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDiastolic -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:26 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:26 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:29 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:29 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateCalculate()[pri:5, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:29 IST" name="validateCalculate" finished-at="2025-06-30T10:41:30 IST" duration-ms="787" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCalculate -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:30 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:30 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateScoresGenerated([Ljava.lang.String;)[pri:6, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:30 IST" name="validateScoresGenerated" data-provider="filereaderScore" finished-at="2025-06-30T10:41:32 IST" duration-ms="1764" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@1dd090c3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateScoresGenerated -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:32 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:32 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateScoresGenerated([Ljava.lang.String;)[pri:6, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:32 IST" name="validateScoresGenerated" data-provider="filereaderScore" finished-at="2025-06-30T10:41:34 IST" duration-ms="1742" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@2bc63e21]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateScoresGenerated -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:34 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:34 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateScoresGenerated([Ljava.lang.String;)[pri:6, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:34 IST" name="validateScoresGenerated" data-provider="filereaderScore" finished-at="2025-06-30T10:41:35 IST" duration-ms="1687" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@645828ff]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateScoresGenerated -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:35 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:35 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateScoresGenerated([Ljava.lang.String;)[pri:6, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:35 IST" name="validateScoresGenerated" data-provider="filereaderScore" finished-at="2025-06-30T10:41:37 IST" duration-ms="1662" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@99206ba]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateScoresGenerated -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:37 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:37 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateScoresGenerated([Ljava.lang.String;)[pri:6, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:37 IST" name="validateScoresGenerated" data-provider="filereaderScore" finished-at="2025-06-30T10:41:39 IST" duration-ms="1465" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@65c0529e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateScoresGenerated -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:39 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:39 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateScoresGenerated([Ljava.lang.String;)[pri:6, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:39 IST" name="validateScoresGenerated" data-provider="filereaderScore" finished-at="2025-06-30T10:41:40 IST" duration-ms="1608" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@7322013f]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Age score mismatch for age :56 expected [5] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Age score mismatch for age :56 expected [5] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at tests.TestScripts.validateScoresGenerated(TestScripts.java:118)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateScoresGenerated -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:40 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:40 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateScoresGenerated([Ljava.lang.String;)[pri:6, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:40 IST" name="validateScoresGenerated" data-provider="filereaderScore" finished-at="2025-06-30T10:41:42 IST" duration-ms="1524" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@112f8f8f]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Age score mismatch for age :75 expected [5] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Age score mismatch for age :75 expected [5] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at tests.TestScripts.validateScoresGenerated(TestScripts.java:118)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateScoresGenerated -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:42 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:42 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateScoresGenerated([Ljava.lang.String;)[pri:6, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:42 IST" name="validateScoresGenerated" data-provider="filereaderScore" finished-at="2025-06-30T10:41:44 IST" duration-ms="1601" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@3bdf6d63]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Age score mismatch for age :76 expected [3] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Age score mismatch for age :76 expected [3] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at tests.TestScripts.validateScoresGenerated(TestScripts.java:118)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateScoresGenerated -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:44 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:44 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateScoresGenerated([Ljava.lang.String;)[pri:6, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:44 IST" name="validateScoresGenerated" data-provider="filereaderScore" finished-at="2025-06-30T10:41:45 IST" duration-ms="1381" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@477dc93]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Age score mismatch for age :1000 expected [3] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Age score mismatch for age :1000 expected [3] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at tests.TestScripts.validateScoresGenerated(TestScripts.java:118)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateScoresGenerated -->
+        <test-method signature="validateScoresGenerated([Ljava.lang.String;)[pri:6, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:45 IST" name="validateScoresGenerated" data-provider="filereaderScore" finished-at="2025-06-30T10:41:47 IST" duration-ms="1555" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@53d94a6b]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Age score mismatch for age :45 expected [7] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Age score mismatch for age :45 expected [7] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at tests.TestScripts.validateScoresGenerated(TestScripts.java:118)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateScoresGenerated -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:45 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:45 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:47 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:47 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateScoresGenerated([Ljava.lang.String;)[pri:6, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:47 IST" name="validateScoresGenerated" data-provider="filereaderScore" finished-at="2025-06-30T10:41:49 IST" duration-ms="1520" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@5a9b73bb]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateScoresGenerated -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:49 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:49 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateScoresGenerated([Ljava.lang.String;)[pri:6, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:49 IST" name="validateScoresGenerated" data-provider="filereaderScore" finished-at="2025-06-30T10:41:50 IST" duration-ms="1660" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@199032a3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateScoresGenerated -->
+        <test-method signature="validateScoresGenerated([Ljava.lang.String;)[pri:6, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:50 IST" name="validateScoresGenerated" data-provider="filereaderScore" finished-at="2025-06-30T10:41:52 IST" duration-ms="1805" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@6eaa5458]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Age score mismatch for age :25 expected [10] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Age score mismatch for age :25 expected [10] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at tests.TestScripts.validateScoresGenerated(TestScripts.java:118)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateScoresGenerated -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:50 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:50 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateScoresGenerated([Ljava.lang.String;)[pri:6, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:52 IST" name="validateScoresGenerated" data-provider="filereaderScore" finished-at="2025-06-30T10:41:54 IST" duration-ms="1373" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@32711975]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateScoresGenerated -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:52 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:52 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:54 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:41:54 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="alertConsultDoctor()[pri:7, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:41:54 IST" name="alertConsultDoctor" finished-at="2025-06-30T10:42:20 IST" duration-ms="26485" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Systolic BP : 130  Diastolic BP : 70  Pulse BP :Below 40Alert not generated to consult a doctor]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Systolic BP : 130  Diastolic BP : 70  Pulse BP :Below 40Alert not generated to consult a doctor
+at org.testng.Assert.fail(Assert.java:111)
+at pages.HomePage.consultDoctor(HomePage.java:240)
+at tests.TestScripts.alertConsultDoctor(TestScripts.java:133)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- alertConsultDoctor -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:42:20 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:42:20 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="alertNotInRange()[pri:8, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:42:20 IST" name="alertNotInRange" finished-at="2025-06-30T10:44:31 IST" duration-ms="131183" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Systolic BP : 130  Diastolic BP : 69  Pulse BP :Below 40 Alert not generated for BP values not in range]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Systolic BP : 130  Diastolic BP : 69  Pulse BP :Below 40 Alert not generated for BP values not in range
+at org.testng.Assert.fail(Assert.java:111)
+at pages.HomePage.notInRange(HomePage.java:256)
+at tests.TestScripts.alertNotInRange(TestScripts.java:139)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- alertNotInRange -->
+        <test-method signature="scoreCard()[pri:9, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:44:32 IST" name="scoreCard" finished-at="2025-06-30T10:47:44 IST" duration-ms="192031" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- scoreCard -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:44:32 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:44:32 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:44 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:47:44 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateHealthRemark([Ljava.lang.String;)[pri:10, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:44 IST" name="validateHealthRemark" data-provider="filereadRemarks" finished-at="2025-06-30T10:47:45 IST" duration-ms="1168" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@5c4759b6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateHealthRemark -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:45 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:47:45 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateHealthRemark([Ljava.lang.String;)[pri:10, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:45 IST" name="validateHealthRemark" data-provider="filereadRemarks" finished-at="2025-06-30T10:47:46 IST" duration-ms="1385" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@8648641]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateHealthRemark -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:46 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:47:46 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateHealthRemark([Ljava.lang.String;)[pri:10, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:46 IST" name="validateHealthRemark" data-provider="filereadRemarks" finished-at="2025-06-30T10:47:48 IST" duration-ms="1573" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@5408f108]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateHealthRemark -->
+        <test-method signature="validateHealthRemark([Ljava.lang.String;)[pri:10, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:48 IST" name="validateHealthRemark" data-provider="filereadRemarks" finished-at="2025-06-30T10:47:49 IST" duration-ms="1473" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@1af13038]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateHealthRemark -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:48 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:47:48 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:49 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:47:49 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateHealthRemark([Ljava.lang.String;)[pri:10, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:49 IST" name="validateHealthRemark" data-provider="filereadRemarks" finished-at="2025-06-30T10:47:51 IST" duration-ms="1427" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@2bcb34e8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateHealthRemark -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:51 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:47:51 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateHealthRemark([Ljava.lang.String;)[pri:10, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:51 IST" name="validateHealthRemark" data-provider="filereadRemarks" finished-at="2025-06-30T10:47:52 IST" duration-ms="1402" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@212f39df]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateHealthRemark -->
+        <test-method signature="validateHealthRemark([Ljava.lang.String;)[pri:10, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:52 IST" name="validateHealthRemark" data-provider="filereadRemarks" finished-at="2025-06-30T10:47:54 IST" duration-ms="1353" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@5ed1df4e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateHealthRemark -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:52 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:47:52 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:54 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:47:54 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateHealthRemark([Ljava.lang.String;)[pri:10, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:54 IST" name="validateHealthRemark" data-provider="filereadRemarks" finished-at="2025-06-30T10:47:55 IST" duration-ms="1795" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@41c1a3fc]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateHealthRemark -->
+        <test-method signature="validateHealthRemark([Ljava.lang.String;)[pri:10, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:55 IST" name="validateHealthRemark" data-provider="filereadRemarks" finished-at="2025-06-30T10:47:57 IST" duration-ms="1661" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@1bf69e56]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateHealthRemark -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:55 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:47:55 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateHealthRemark([Ljava.lang.String;)[pri:10, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:57 IST" name="validateHealthRemark" data-provider="filereadRemarks" finished-at="2025-06-30T10:47:58 IST" duration-ms="1435" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@7b641810]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateHealthRemark -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:57 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:47:57 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:58 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:47:58 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateHealthRemark([Ljava.lang.String;)[pri:10, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:47:58 IST" name="validateHealthRemark" data-provider="filereadRemarks" finished-at="2025-06-30T10:48:00 IST" duration-ms="1653" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@67c71b28]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateHealthRemark -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:48:00 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:48:00 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateHealthRemark([Ljava.lang.String;)[pri:10, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:48:00 IST" name="validateHealthRemark" data-provider="filereadRemarks" finished-at="2025-06-30T10:48:02 IST" duration-ms="1783" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@40893c8f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateHealthRemark -->
+        <test-method signature="validateHealthRemark([Ljava.lang.String;)[pri:10, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:48:02 IST" name="validateHealthRemark" data-provider="filereadRemarks" finished-at="2025-06-30T10:48:04 IST" duration-ms="1794" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@222f185a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateHealthRemark -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:48:02 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:48:02 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:48:04 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:48:04 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateHealthRemark([Ljava.lang.String;)[pri:10, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:48:04 IST" name="validateHealthRemark" data-provider="filereadRemarks" finished-at="2025-06-30T10:48:05 IST" duration-ms="1657" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@347cfe6d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateHealthRemark -->
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:48:05 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:48:05 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPagesAndUtils -->
+        <test-method signature="validateResetButton()[pri:11, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:48:05 IST" name="validateResetButton" finished-at="2025-06-30T10:48:07 IST" duration-ms="1591" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Result card should be hidden after reset. expected [false] but found [true]]]>
@@ -32,7 +1600,7 @@
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
 at org.testng.Assert.assertFalse(Assert.java:79)
-at tests.TestScripts.validateResetButton(TestScripts.java:165)
+at tests.TestScripts.validateResetButton(TestScripts.java:173)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -65,7 +1633,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateResetButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TestScripts@279fedbd]" started-at="2025-06-30T01:23:03 IST" name="tearDown" finished-at="2025-06-30T01:23:06 IST" duration-ms="2735" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TestScripts@b2c9a9c]" started-at="2025-06-30T10:48:07 IST" name="tearDown" finished-at="2025-06-30T10:48:15 IST" duration-ms="7620" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

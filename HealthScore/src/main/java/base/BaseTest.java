@@ -31,6 +31,8 @@ public class BaseTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 	
+	
+	
 	@AfterTest
 	public void tearDown()
 	{
@@ -38,4 +40,5 @@ public class BaseTest {
 		driver.quit();
 		}
 	}
+
 }

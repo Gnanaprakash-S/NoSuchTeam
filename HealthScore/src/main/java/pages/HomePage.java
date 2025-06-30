@@ -9,6 +9,7 @@ import java.util.List;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -207,19 +208,15 @@ public class HomePage {
   
     public boolean isResultPresent()
     {
-    	if(scoreCard()=="none")
-    		return false;
-    	else
-    		return true;
-    }
-    public String scoreCard()
-    {
     	try {
-    		return resultBox.getCssValue("display");
-    	}catch(NoAlertPresentException e){
-    		return " ";
+    		return resultBox.isDisplayed();
+    	}
+    	catch(NoSuchElementException e)
+    	{
+    		return false;
     	}
     }
+   
 
     public String[][] getTestData(String sheetName) throws FileNotFoundException, IOException 
     {

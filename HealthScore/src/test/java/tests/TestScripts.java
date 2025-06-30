@@ -4,17 +4,20 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import ExtentListener.ExtentTestListener;
 import base.BaseTest;
 import pages.HomePage;
 import utils.ExcelRead;
 
-
+@Listeners(ExtentTestListener.class)
 public class TestScripts extends BaseTest{
 	
 	HomePage homePage;
@@ -23,6 +26,11 @@ public class TestScripts extends BaseTest{
 	public void setUpPagesAndUtils()
 	{
 		homePage = new HomePage(driver);
+	}
+	
+	public WebDriver getDriver() {
+		// TODO Auto-generated method stub
+		return this.driver;
 	}
 
 	@DataProvider(name="filereader")

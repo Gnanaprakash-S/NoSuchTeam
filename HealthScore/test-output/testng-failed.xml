@@ -7,7 +7,13 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="validateSystolic" invocation-numbers="5 6"/>
+          <include name="alertConsultDoctor"/>
           <include name="setUpPagesAndUtils"/>
+          <include name="alertNotInRange"/>
+          <include name="validateScoresGenerated" invocation-numbers="5 6 7 8 9 12"/>
+          <include name="validateName" invocation-numbers="0"/>
+          <include name="validateDiastolic" invocation-numbers="4 5 6"/>
           <include name="validateResetButton"/>
         </methods>
       </class> <!-- tests.TestScripts -->
