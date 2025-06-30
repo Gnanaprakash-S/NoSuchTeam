@@ -7,12 +7,8 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="scoreCard"/>
+          <include name="validateAge" invocation-numbers="6"/>
           <include name="setUpPagesAndUtils"/>
-<<<<<<< HEAD
-          <include name="validateScoresGenerated" invocation-numbers="5 6 7 8 9 12"/>
-=======
->>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
         </methods>
       </class> <!-- tests.TestScripts -->
     </classes>

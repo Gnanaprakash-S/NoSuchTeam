@@ -59,8 +59,6 @@ public class HomePage {
 	@FindBy(xpath="//button[@class=\"btn btn-reset\"]")
 	WebElement reset;
 	
-//	@FindBy(xpath = "//div[@id=\"scoreCard\"]/div[2]/button")
-//	WebElement resetButton;
 	
 	public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -209,10 +207,13 @@ public class HomePage {
     {
     	try {
     		return resultBox.isDisplayed();
-    	}catch(NoSuchElementException e){
+    	}
+    	catch(NoSuchElementException e)
+    	{
     		return false;
     	}
     }
+   
 
     public String[][] getTestData(String sheetName) throws FileNotFoundException, IOException 
     {
@@ -262,7 +263,7 @@ public class HomePage {
 	    	withAllValid("Prakash", "18", data[i][3],data[i][0],data[i][1]);	
         	if(isResultPresent())
         	{
-        		reset.click();
+        		clickReset();
         	}
         	else
         	{
