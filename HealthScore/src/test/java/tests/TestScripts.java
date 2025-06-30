@@ -37,7 +37,7 @@ public class TestScripts extends BaseTest{
 	public static String[][] read() throws IOException {
 		ExcelRead excelData = new ExcelRead(System.getProperty("user.dir") + "/src/Resources/Updated_Final_Tests 2 (3).xlsx", "Test",2,8);
 	    return excelData.readExcelOperation();
-	}
+	} 
 	
 	@DataProvider(name="filereadRemarks")
 	public static String[][] readRemarks() throws IOException {
