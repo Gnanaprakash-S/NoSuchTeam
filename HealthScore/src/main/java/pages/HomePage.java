@@ -210,10 +210,14 @@ public class HomePage {
     {
     	try {
     		return resultBox.isDisplayed();
-    	}catch(NoSuchElementException e){
+    	}
+    	catch(NoSuchElementException e)
+    	{
+
     		return false;
     	}
     }
+   
 
     public String[][] getTestData(String sheetName) throws FileNotFoundException, IOException 
     {

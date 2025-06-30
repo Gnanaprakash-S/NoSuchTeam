@@ -7,8 +7,21 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
+<<<<<<< HEAD
           <include name="scoreCard"/>
+=======
+          <include name="validateSystolic" invocation-numbers="5 6"/>
+          <include name="alertConsultDoctor"/>
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
           <include name="setUpPagesAndUtils"/>
+<<<<<<< HEAD
+=======
+          <include name="alertNotInRange"/>
+          <include name="validateScoresGenerated" invocation-numbers="5 6 7 8 9 12"/>
+          <include name="validateName" invocation-numbers="0"/>
+          <include name="validateDiastolic" invocation-numbers="4 5 6"/>
+          <include name="validateResetButton"/>
+>>>>>>> branch 'main' of https://github.com/Gnanaprakash-S/NoSuchTeam.git
         </methods>
       </class> <!-- tests.TestScripts -->
     </classes>
