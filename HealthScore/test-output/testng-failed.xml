@@ -8,7 +8,7 @@
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="setUpPagesAndUtils"/>
-          <include name="validateResetButton"/>
+          <include name="validateScoresGenerated" invocation-numbers="5 6 7 8 9 12"/>
         </methods>
       </class> <!-- tests.TestScripts -->
     </classes>
