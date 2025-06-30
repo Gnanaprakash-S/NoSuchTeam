@@ -7,8 +7,8 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="scoreCard"/>
           <include name="setUpPagesAndUtils"/>
-          <include name="validateResetButton"/>
         </methods>
       </class> <!-- tests.TestScripts -->
     </classes>

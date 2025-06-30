@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\2401014\AppData\Local\Temp\testng-eclipse--1455576735\testng-customsuite.xml</span>
+                    <span>C:\Users\2401217\AppData\Local\Temp\testng-eclipse--1111655317\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="tests.TestScripts" class="method navigator-link" hash-for-method="validateResetButton">validateResetButton</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="tests.TestScripts" class="method navigator-link" hash-for-method="scoreCard">scoreCard</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -126,14 +126,13 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validateResetButton">
-                  </a> <!-- validateResetButton -->
-                  <span class="method-name">validateResetButton</span>
-                  <div class="stack-trace">java.lang.AssertionError: Result card should be hidden after reset. expected [false] but found [true]
+                  <a name="scoreCard">
+                  </a> <!-- scoreCard -->
+                  <span class="method-name">scoreCard</span>
+                  <div class="stack-trace">java.lang.AssertionError: Systolic BP : 130  Diastolic BP : 70  Pulse BP :50-59 BPM result not generated alert interrupted
 	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertFalse(Assert.java:79)
-	at tests.TestScripts.validateResetButton(TestScripts.java:165)
+	at pages.HomePage.success(HomePage.java:270)
+	at tests.TestScripts.scoreCard(TestScripts.java:138)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -169,7 +168,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\2401014\AppData\Local\Temp\testng-eclipse--1455576735\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\2401217\AppData\Local\Temp\testng-eclipse--1111655317\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -180,7 +179,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;tests.TestScripts&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;validateResetButton&quot;/&gt;
+          &lt;include name=&quot;scoreCard&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- tests.TestScripts --&gt;
     &lt;/classes&gt;
@@ -224,14 +223,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validateResetButton')
+data.setCell(0, 1, 'scoreCard')
 data.setCell(0, 2, 'tests.TestScripts')
-data.setCell(0, 3, 1506);
+data.setCell(0, 3, 54089);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 54 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -256,13 +255,13 @@ return data;
                 <br/>
                 <span class="ignored-method-name">validateCalculate</span>
                 <br/>
+                <span class="ignored-method-name">validateResetButton</span>
+                <br/>
                 <span class="ignored-method-name">alertConsultDoctor</span>
                 <br/>
                 <span class="ignored-method-name">validateSystolic</span>
                 <br/>
                 <span class="ignored-method-name">alertNotInRange</span>
-                <br/>
-                <span class="ignored-method-name">scoreCard</span>
                 <br/>
                 <span class="ignored-method-name">validateAge</span>
                 <br/>
@@ -291,17 +290,17 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setUpPagesAndUtils</span>
-                <span class="method-start">5948 ms</span>
+                <span class="method-start">5301 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">validateResetButton</span>
-                <span class="method-start">6029 ms</span>
+                <span class="method-name">scoreCard</span>
+                <span class="method-start">5352 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">7548 ms</span>
+                <span class="method-start">59447 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

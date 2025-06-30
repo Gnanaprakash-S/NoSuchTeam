@@ -9,6 +9,7 @@ import java.util.List;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -207,17 +208,10 @@ public class HomePage {
   
     public boolean isResultPresent()
     {
-    	if(scoreCard()=="none")
-    		return false;
-    	else
-    		return true;
-    }
-    public String scoreCard()
-    {
     	try {
-    		return resultBox.getCssValue("display");
-    	}catch(NoAlertPresentException e){
-    		return " ";
+    		return resultBox.isDisplayed();
+    	}catch(NoSuchElementException e){
+    		return false;
     	}
     }
 
@@ -269,14 +263,13 @@ public class HomePage {
 	    	withAllValid("Prakash", "18", data[i][3],data[i][0],data[i][1]);	
         	if(isResultPresent())
         	{
-        		driver.navigate().refresh();
+        		reset.click();
         	}
         	else
         	{
         		Assert.fail("Systolic BP : "+data[i][0]+"  Diastolic BP : "+data[i][1]+"  Pulse BP :"+data[i][3]+" result not generated alert interrupted");
         		break;
         	}
-        	
 	    }
     }
 

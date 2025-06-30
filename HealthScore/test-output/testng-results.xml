@@ -2,12 +2,12 @@
 <testng-results ignored="11" total="12" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-30T01:22:55 IST" name="Default suite" finished-at="2025-06-30T01:23:06 IST" duration-ms="10299">
+  <suite started-at="2025-06-30T10:40:36 IST" name="Default suite" finished-at="2025-06-30T10:41:39 IST" duration-ms="63563">
     <groups>
     </groups>
-    <test started-at="2025-06-30T01:22:55 IST" name="Default test" finished-at="2025-06-30T01:23:06 IST" duration-ms="10299">
+    <test started-at="2025-06-30T10:40:36 IST" name="Default test" finished-at="2025-06-30T10:41:39 IST" duration-ms="63563">
       <class name="tests.TestScripts">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.TestScripts@279fedbd]" started-at="2025-06-30T01:22:55 IST" name="setUp" finished-at="2025-06-30T01:23:01 IST" duration-ms="5882" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.TestScripts@279fedbd]" started-at="2025-06-30T10:40:36 IST" name="setUp" finished-at="2025-06-30T10:40:41 IST" duration-ms="5252" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,21 +18,20 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@279fedbd]" started-at="2025-06-30T01:23:01 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T01:23:01 IST" duration-ms="80" status="PASS">
+        <test-method is-config="true" signature="setUpPagesAndUtils()[pri:0, instance:tests.TestScripts@279fedbd]" started-at="2025-06-30T10:40:41 IST" name="setUpPagesAndUtils" finished-at="2025-06-30T10:40:41 IST" duration-ms="50" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPagesAndUtils -->
-        <test-method signature="validateResetButton()[pri:11, instance:tests.TestScripts@279fedbd]" started-at="2025-06-30T01:23:01 IST" name="validateResetButton" finished-at="2025-06-30T01:23:03 IST" duration-ms="1506" status="FAIL">
+        <test-method signature="scoreCard()[pri:9, instance:tests.TestScripts@279fedbd]" started-at="2025-06-30T10:40:41 IST" name="scoreCard" finished-at="2025-06-30T10:41:35 IST" duration-ms="54089" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Result card should be hidden after reset. expected [false] but found [true]]]>
+              <![CDATA[Systolic BP : 130  Diastolic BP : 70  Pulse BP :50-59 BPM result not generated alert interrupted]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Result card should be hidden after reset. expected [false] but found [true]
+              <![CDATA[java.lang.AssertionError: Systolic BP : 130  Diastolic BP : 70  Pulse BP :50-59 BPM result not generated alert interrupted
 at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertFalse(Assert.java:79)
-at tests.TestScripts.validateResetButton(TestScripts.java:165)
+at pages.HomePage.success(HomePage.java:270)
+at tests.TestScripts.scoreCard(TestScripts.java:138)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -64,8 +63,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateResetButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TestScripts@279fedbd]" started-at="2025-06-30T01:23:03 IST" name="tearDown" finished-at="2025-06-30T01:23:06 IST" duration-ms="2735" status="PASS">
+        </test-method> <!-- scoreCard -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TestScripts@279fedbd]" started-at="2025-06-30T10:41:35 IST" name="tearDown" finished-at="2025-06-30T10:41:39 IST" duration-ms="4103" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
