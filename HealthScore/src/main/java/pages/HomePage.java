@@ -208,8 +208,8 @@ public class HomePage {
     public boolean isResultPresent()
     {
     	try {
-    		return resultBox.isDisplayed();    	}
-    	catch(NoSuchElementException e){
+    		return resultBox.isDisplayed();
+    	}catch(NoSuchElementException e){
     		return false;
     	}
     }
@@ -262,14 +262,13 @@ public class HomePage {
 	    	withAllValid("Prakash", "18", data[i][3],data[i][0],data[i][1]);	
         	if(isResultPresent())
         	{
-        		driver.navigate().refresh();
+        		reset.click();
         	}
         	else
         	{
         		Assert.fail("Systolic BP : "+data[i][0]+"  Diastolic BP : "+data[i][1]+"  Pulse BP :"+data[i][3]+" result not generated alert interrupted");
         		break;
         	}
-        	
 	    }
     }
 
