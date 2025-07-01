@@ -10,7 +10,7 @@
           <include name="validateSystolic" invocation-numbers="5 6"/>
           <include name="alertConsultDoctor"/>
           <include name="scoreCard"/>
-          <include name="validateAge" invocation-numbers="6"/>
+          <include name="validateAge" invocation-numbers="2 6"/>
           <include name="setUpPagesAndUtils"/>
           <include name="alertNotInRange"/>
           <include name="validateScoresGenerated" invocation-numbers="5 6 7 8 9 12"/>
