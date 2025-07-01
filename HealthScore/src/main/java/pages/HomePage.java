@@ -58,9 +58,7 @@ public class HomePage {
 	
 	@FindBy(xpath="//button[@class=\"btn btn-reset\"]")
 	WebElement reset;
-	
-//	@FindBy(xpath = "//div[@id=\"scoreCard\"]/div[2]/button")
-//	WebElement resetButton;
+
 	
 	public HomePage(WebDriver driver) {
         this.driver = driver;

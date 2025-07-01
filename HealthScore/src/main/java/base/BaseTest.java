@@ -1,6 +1,10 @@
 package base;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.time.Duration;
+import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,11 +16,11 @@ import org.testng.annotations.Parameters;
 
 public class BaseTest {
 	protected WebDriver driver;
-	static String baseUrl="https://yalanuwu.github.io/Health-Index-Calculator/";
+	static String baseUrl;
 	
 	@BeforeTest
 	@Parameters("browser")
-	public void setUp(@Optional("chrome")String browser)
+	public void setUp(@Optional("chrome")String browser) throws FileNotFoundException, IOException
 	{
 		if(browser.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
@@ -25,7 +29,9 @@ public class BaseTest {
 		{
 			driver = new EdgeDriver();
 		}
-		
+		Properties prop = new Properties();
+		prop.load(new FileInputStream(System.getProperty("user.dir") + "/src/main/java/utils/Properties.properties"));
+		baseUrl = prop.getProperty("baseUrl"); // fetch the URL string
 		driver.get(baseUrl);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

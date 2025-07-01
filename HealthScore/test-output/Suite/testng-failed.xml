@@ -1,36 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="Test1(failed)">
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="tests.TestScripts">
-        <methods>
-          <include name="setUp"/>
-          <include name="validateSystolic" invocation-numbers="1 2 3 5 6"/>
-          <include name="tearDown"/>
-          <include name="setUpPagesAndUtils"/>
-          <include name="ConsultADoctor"/>
-          <include name="validateName" invocation-numbers="0"/>
-          <include name="validateDiastolic" invocation-numbers="4 5 6"/>
-        </methods>
-      </class> <!-- tests.TestScripts -->
-    </classes>
-  </test> <!-- Test1(failed) -->
-  <test thread-count="5" parallel="tests" name="Test2(failed)">
+  <test thread-count="5" parallel="tests" name="Edge_Test(failed)">
     <parameter name="browser" value="edge"/>
     <classes>
       <class name="tests.TestScripts">
         <methods>
           <include name="setUp"/>
+          <include name="validateSystolic" invocation-numbers="5 6"/>
           <include name="tearDown"/>
-          <include name="validateSystolic" invocation-numbers="1 2 3 5 6"/>
+          <include name="scoreCard"/>
+          <include name="alertConsultDoctor"/>
           <include name="setUpPagesAndUtils"/>
-          <include name="ConsultADoctor"/>
+          <include name="validateScoresGenerated" invocation-numbers="5 6 7 8 9 12"/>
+          <include name="alertNotInRange"/>
           <include name="validateName" invocation-numbers="0"/>
           <include name="validateDiastolic" invocation-numbers="4 5 6"/>
+          <include name="validateResetButton"/>
         </methods>
       </class> <!-- tests.TestScripts -->
     </classes>
-  </test> <!-- Test2(failed) -->
+  </test> <!-- Edge_Test(failed) -->
+  <test thread-count="5" parallel="tests" name="Chrome_Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="tests.TestScripts">
+        <methods>
+          <include name="setUp"/>
+          <include name="validateSystolic" invocation-numbers="5 6"/>
+          <include name="tearDown"/>
+          <include name="scoreCard"/>
+          <include name="alertConsultDoctor"/>
+          <include name="setUpPagesAndUtils"/>
+          <include name="validateScoresGenerated" invocation-numbers="5 6 7 8 9 12"/>
+          <include name="alertNotInRange"/>
+          <include name="validateName" invocation-numbers="0"/>
+          <include name="validateDiastolic" invocation-numbers="4 5 6"/>
+          <include name="validateResetButton"/>
+        </methods>
+      </class> <!-- tests.TestScripts -->
+    </classes>
+  </test> <!-- Chrome_Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

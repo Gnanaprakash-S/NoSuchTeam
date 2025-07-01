@@ -1,0 +1,1004 @@
+<html>
+<head>
+<title>TestNG:  Chrome_Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Chrome_Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>52/16/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Jun 30 12:14:16 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>213 seconds (213822 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.TestScripts.validateName()'><b>validateName</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@4f643acd</td>
+<td><div><pre>java.lang.AssertionError:   Name needs to fails but pass. expected [false] but found [true]
+	at tests.TestScripts.validateName(TestScripts.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace551135963", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace551135963'><pre>java.lang.AssertionError:   Name needs to fails but pass. expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at tests.TestScripts.validateName(TestScripts.java:51)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateResetButton()'><b>validateResetButton</b><br>Test class: tests.TestScripts</td>
+<td><div><pre>java.lang.AssertionError: Result card should be hidden after reset. expected [false] but found [true]
+	at tests.TestScripts.validateResetButton(TestScripts.java:173)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1871789299", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1871789299'><pre>java.lang.AssertionError: Result card should be hidden after reset. expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at tests.TestScripts.validateResetButton(TestScripts.java:173)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateScoresGenerated()'><b>validateScoresGenerated</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@157fb431</td>
+<td><div><pre>java.lang.AssertionError: Failing to provide score for inputs :45,91-100 BPM,149,99
+	at tests.TestScripts.validateScoresGenerated(TestScripts.java:125)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1361685068", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1361685068'><pre>java.lang.AssertionError: Failing to provide score for inputs :45,91-100 BPM,149,99
+	at org.testng.Assert.fail(Assert.java:111)
+	at tests.TestScripts.validateScoresGenerated(TestScripts.java:125)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.alertConsultDoctor()'><b>alertConsultDoctor</b><br>Test class: tests.TestScripts</td>
+<td><div><pre>java.lang.AssertionError: Systolic BP : 130  Diastolic BP : 70  Pulse BP :Below 40Alert not generated to consult a doctor
+	at pages.HomePage.consultDoctor(HomePage.java:236)
+	at tests.TestScripts.alertConsultDoctor(TestScripts.java:133)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2102344200", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2102344200'><pre>java.lang.AssertionError: Systolic BP : 130  Diastolic BP : 70  Pulse BP :Below 40Alert not generated to consult a doctor
+	at org.testng.Assert.fail(Assert.java:111)
+	at pages.HomePage.consultDoctor(HomePage.java:236)
+	at tests.TestScripts.alertConsultDoctor(TestScripts.java:133)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>16</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateSystolic()'><b>validateSystolic</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@587a3642</td>
+<td><div><pre>java.lang.AssertionError: 130 SystolicBP needs to pass but fails. expected [true] but found [false]
+	at tests.TestScripts.validateSystolic(TestScripts.java:69)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1446381599", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1446381599'><pre>java.lang.AssertionError: 130 SystolicBP needs to pass but fails. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at tests.TestScripts.validateSystolic(TestScripts.java:69)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateScoresGenerated()'><b>validateScoresGenerated</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@7c006145</td>
+<td><div><pre>java.lang.AssertionError: Failing to provide score for inputs :75,60-80 BPM,131,86
+	at tests.TestScripts.validateScoresGenerated(TestScripts.java:125)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace36178915", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace36178915'><pre>java.lang.AssertionError: Failing to provide score for inputs :75,60-80 BPM,131,86
+	at org.testng.Assert.fail(Assert.java:111)
+	at tests.TestScripts.validateScoresGenerated(TestScripts.java:125)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateScoresGenerated()'><b>validateScoresGenerated</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@755419ff</td>
+<td><div><pre>java.lang.AssertionError: Failing to provide score for inputs :1000,81-90 BPM,140,90
+	at tests.TestScripts.validateScoresGenerated(TestScripts.java:125)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace165333329", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace165333329'><pre>java.lang.AssertionError: Failing to provide score for inputs :1000,81-90 BPM,140,90
+	at org.testng.Assert.fail(Assert.java:111)
+	at tests.TestScripts.validateScoresGenerated(TestScripts.java:125)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateDiastolic()'><b>validateDiastolic</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@92fc792</td>
+<td><div><pre>java.lang.AssertionError: 101 DiastolicBP needs to fails but pass. expected [false] but found [true]
+	at tests.TestScripts.validateDiastolic(TestScripts.java:77)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1714785561", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1714785561'><pre>java.lang.AssertionError: 101 DiastolicBP needs to fails but pass. expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at tests.TestScripts.validateDiastolic(TestScripts.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>1</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.alertNotInRange()'><b>alertNotInRange</b><br>Test class: tests.TestScripts</td>
+<td><div><pre>java.lang.AssertionError: Systolic BP : 130  Diastolic BP : 69  Pulse BP :Below 40 Alert not generated for BP values not in range
+	at pages.HomePage.notInRange(HomePage.java:252)
+	at tests.TestScripts.alertNotInRange(TestScripts.java:139)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1586159674", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1586159674'><pre>java.lang.AssertionError: Systolic BP : 130  Diastolic BP : 69  Pulse BP :Below 40 Alert not generated for BP values not in range
+	at org.testng.Assert.fail(Assert.java:111)
+	at pages.HomePage.notInRange(HomePage.java:252)
+	at tests.TestScripts.alertNotInRange(TestScripts.java:139)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>79</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateDiastolic()'><b>validateDiastolic</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@6daf5828</td>
+<td><div><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Provided BP values are not valid. Please Check Once Again}
+  (Session info: chrome=137.0.7151.69): Provided BP values are not valid. Please Check Once Again
+Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [96b52637b8fc44872cfee65a7bb8f910, findElement {value=bp-diastolic, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2401015\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50802}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50802/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 96b52637b8fc44872cfee65a7bb8f910
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:48)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:474)
+	at pages.HomePage.verify(HomePage.java:73)
+	at pages.HomePage.diastolicBP(HomePage.java:144)
+	at tests.TestScripts.validateDiastolic(TestScripts.java:77)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1285307981", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1285307981'><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Provided BP values are not valid. Please Check Once Again}
+  (Session info: chrome=137.0.7151.69): Provided BP values are not valid. Please Check Once Again
+Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [96b52637b8fc44872cfee65a7bb8f910, findElement {value=bp-diastolic, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2401015\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50802}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50802/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 96b52637b8fc44872cfee65a7bb8f910
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:48)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:474)
+	at pages.HomePage.verify(HomePage.java:73)
+	at pages.HomePage.diastolicBP(HomePage.java:144)
+	at tests.TestScripts.validateDiastolic(TestScripts.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>1</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateScoresGenerated()'><b>validateScoresGenerated</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@21e6e261</td>
+<td><div><pre>java.lang.AssertionError: Failing to provide score for inputs :56,60-80 BPM,130,85
+	at tests.TestScripts.validateScoresGenerated(TestScripts.java:125)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace520850104", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace520850104'><pre>java.lang.AssertionError: Failing to provide score for inputs :56,60-80 BPM,130,85
+	at org.testng.Assert.fail(Assert.java:111)
+	at tests.TestScripts.validateScoresGenerated(TestScripts.java:125)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateSystolic()'><b>validateSystolic</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@5f6b0ca9</td>
+<td><div><pre>java.lang.AssertionError: 131 SystolicBP needs to pass but fails. expected [true] but found [false]
+	at tests.TestScripts.validateSystolic(TestScripts.java:69)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1388404949", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1388404949'><pre>java.lang.AssertionError: 131 SystolicBP needs to pass but fails. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at tests.TestScripts.validateSystolic(TestScripts.java:69)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateScoresGenerated()'><b>validateScoresGenerated</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@60ec113c</td>
+<td><div><pre>java.lang.AssertionError: Failing to provide score for inputs :76,81-90 BPM,139,89
+	at tests.TestScripts.validateScoresGenerated(TestScripts.java:125)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2079852908", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2079852908'><pre>java.lang.AssertionError: Failing to provide score for inputs :76,81-90 BPM,139,89
+	at org.testng.Assert.fail(Assert.java:111)
+	at tests.TestScripts.validateScoresGenerated(TestScripts.java:125)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateScoresGenerated()'><b>validateScoresGenerated</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@7e06ca73</td>
+<td><div><pre>java.lang.AssertionError: Failing to provide score for inputs :25,60-80 BPM,125,80
+	at tests.TestScripts.validateScoresGenerated(TestScripts.java:125)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace7748428", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace7748428'><pre>java.lang.AssertionError: Failing to provide score for inputs :25,60-80 BPM,125,80
+	at org.testng.Assert.fail(Assert.java:111)
+	at tests.TestScripts.validateScoresGenerated(TestScripts.java:125)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.scoreCard()'><b>scoreCard</b><br>Test class: tests.TestScripts</td>
+<td><div><pre>java.lang.AssertionError: Systolic BP : 130  Diastolic BP : 70  Pulse BP :50-59 BPM result not generated alert interrupted
+	at pages.HomePage.success(HomePage.java:272)
+	at tests.TestScripts.scoreCard(TestScripts.java:146)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace641998783", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace641998783'><pre>java.lang.AssertionError: Systolic BP : 130  Diastolic BP : 70  Pulse BP :50-59 BPM result not generated alert interrupted
+	at org.testng.Assert.fail(Assert.java:111)
+	at pages.HomePage.success(HomePage.java:272)
+	at tests.TestScripts.scoreCard(TestScripts.java:146)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>42</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateDiastolic()'><b>validateDiastolic</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@69c1eb91</td>
+<td><div><pre>java.lang.AssertionError: 150 DiastolicBP needs to fails but pass. expected [false] but found [true]
+	at tests.TestScripts.validateDiastolic(TestScripts.java:77)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1494178163", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1494178163'><pre>java.lang.AssertionError: 150 DiastolicBP needs to fails but pass. expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at tests.TestScripts.validateDiastolic(TestScripts.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>1</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.TestScripts.validateCalculate()'><b>validateCalculate</b><br>Test class: tests.TestScripts</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateDiastolic()'><b>validateDiastolic</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@48b98660</td>
+<td></td>
+<td>1</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateName()'><b>validateName</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@211d19a9</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateHealthRemark()'><b>validateHealthRemark</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@12a67e82</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateHealthRemark()'><b>validateHealthRemark</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@41535e74</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateHealthRemark()'><b>validateHealthRemark</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@455d4ab8</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validatePulse()'><b>validatePulse</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@cc4c3eb</td>
+<td></td>
+<td>1</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateName()'><b>validateName</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@2db7fe9f</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateScoresGenerated()'><b>validateScoresGenerated</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@764ca5a3</td>
+<td></td>
+<td>1</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateName()'><b>validateName</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@59eb2958</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateHealthRemark()'><b>validateHealthRemark</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@731a7215</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateScoresGenerated()'><b>validateScoresGenerated</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@61cb29ef</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validatePulse()'><b>validatePulse</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@72b9f9c8</td>
+<td></td>
+<td>1</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validatePulse()'><b>validatePulse</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@7298bf2e</td>
+<td></td>
+<td>1</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateScoresGenerated()'><b>validateScoresGenerated</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@5232f1b2</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateName()'><b>validateName</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@6a8e3e4a</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateAge()'><b>validateAge</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@5744ed6a</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateDiastolic()'><b>validateDiastolic</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@60124963</td>
+<td></td>
+<td>1</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateHealthRemark()'><b>validateHealthRemark</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@25e89bb2</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateHealthRemark()'><b>validateHealthRemark</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@3e0f8d2b</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateDiastolic()'><b>validateDiastolic</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@4e50083d</td>
+<td></td>
+<td>1</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateHealthRemark()'><b>validateHealthRemark</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@3cfb19c5</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateName()'><b>validateName</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@5daf20e3</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateScoresGenerated()'><b>validateScoresGenerated</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@1f0b98a8</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateHealthRemark()'><b>validateHealthRemark</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@51547a94</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateSystolic()'><b>validateSystolic</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@3585644a</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateHealthRemark()'><b>validateHealthRemark</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@1109f221</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateScoresGenerated()'><b>validateScoresGenerated</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@5204e670</td>
+<td></td>
+<td>1</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateHealthRemark()'><b>validateHealthRemark</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@20f6a67e</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateName()'><b>validateName</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@3e4f211e</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateScoresGenerated()'><b>validateScoresGenerated</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@6089540c</td>
+<td></td>
+<td>1</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateAge()'><b>validateAge</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@154b190b</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateSystolic()'><b>validateSystolic</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@9b888a</td>
+<td></td>
+<td>1</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateHealthRemark()'><b>validateHealthRemark</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@471b1e56</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateAge()'><b>validateAge</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@6d981b8d</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateDiastolic()'><b>validateDiastolic</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@2056d474</td>
+<td></td>
+<td>1</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateScoresGenerated()'><b>validateScoresGenerated</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@7c55d72c</td>
+<td></td>
+<td>1</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateSystolic()'><b>validateSystolic</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@63a38f5e</td>
+<td></td>
+<td>1</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validatePulse()'><b>validatePulse</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@4e4aa4d4</td>
+<td></td>
+<td>1</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateAge()'><b>validateAge</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@58292c1d</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateHealthRemark()'><b>validateHealthRemark</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@a976c83</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateSystolic()'><b>validateSystolic</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@75b1dbf0</td>
+<td></td>
+<td>1</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateAge()'><b>validateAge</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@6ec6bd96</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateAge()'><b>validateAge</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@7f1e3d97</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateAge()'><b>validateAge</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@4edca583</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateHealthRemark()'><b>validateHealthRemark</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@354989f3</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validatePulse()'><b>validatePulse</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@6e38a8c1</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateSystolic()'><b>validateSystolic</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@60c4d214</td>
+<td></td>
+<td>1</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validatePulse()'><b>validatePulse</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@4b1f9332</td>
+<td></td>
+<td>1</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validatePulse()'><b>validatePulse</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@32608db3</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateHealthRemark()'><b>validateHealthRemark</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@19b5559e</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+<tr>
+<td title='tests.TestScripts.validateScoresGenerated()'><b>validateScoresGenerated</b><br>Test class: tests.TestScripts<br>Parameters: [Ljava.lang.String;@5fa760ce</td>
+<td></td>
+<td>1</td>
+<td>tests.TestScripts@3bd82cf5</td></tr>
+</table><p>
+</body>
+</html>
