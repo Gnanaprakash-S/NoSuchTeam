@@ -9,7 +9,7 @@ public class ExtentManager {
 
     public static ExtentReports getInstance() {
         if (extent == null) {
-            ExtentSparkReporter sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/src/resuls/ExtentReport.html");
+            ExtentSparkReporter sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/src/results/ExtentReport.html");
             sparkReporter.config().setDocumentTitle("Health Index Calculator Test Report");
             sparkReporter.config().setReportName("Automation Test Results");
             sparkReporter.config().setTheme(Theme.STANDARD);

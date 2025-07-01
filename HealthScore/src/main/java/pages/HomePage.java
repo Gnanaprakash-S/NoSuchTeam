@@ -59,7 +59,6 @@ public class HomePage {
 	@FindBy(xpath="//button[@class=\"btn btn-reset\"]")
 	WebElement reset;
 	
-	
 	public HomePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);

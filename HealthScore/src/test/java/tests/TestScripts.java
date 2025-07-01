@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import ExtentListener.ExtentTestListener;
 import base.BaseTest;
@@ -21,7 +22,8 @@ import utils.ExcelRead;
 public class TestScripts extends BaseTest{
 	
 	HomePage homePage;
-    
+	
+
 	@BeforeMethod   
 	public void setUpPagesAndUtils()
 	{
@@ -47,34 +49,43 @@ public class TestScripts extends BaseTest{
 
 	@Test(priority=0,dataProvider="filereader")
 	public void validateName(String ... data) {
-		Assert.assertTrue(homePage.nameField(data[0]),data[0]+" Name needs to pass but fails.");    	
-    	Assert.assertFalse(homePage.nameField(data[1]),data[1]+" Name needs to fails but pass.");
+		SoftAssert softAssert = new SoftAssert();
+		softAssert.assertTrue(homePage.nameField(data[0]),data[0]+" Name needs to pass but fails.");    	
+    	softAssert.assertFalse(homePage.nameField(data[1]),data[1]+" Name needs to fails but pass.");
+    	softAssert.assertAll();
 	}
 	
 	@Test(priority=1,dataProvider="filereader")
 	public void validateAge(String ... data) {
-		Assert.assertTrue(homePage.ageField(data[0],data[2]),data[2]+" Age needs to pass but fails.");    	
-    	Assert.assertFalse(homePage.ageField(data[0],data[3]),data[3]+" Age needs to fails but pass.");
+		SoftAssert softAssert = new SoftAssert();
+		softAssert.assertTrue(homePage.ageField(data[0],data[2]),data[2]+" Age needs to pass but fails.");    	
+    	softAssert.assertFalse(homePage.ageField(data[0],data[3]),data[3]+" Age needs to fails but pass.");
+    	softAssert.assertAll();
 	}
 	
 	@Test(priority=2,dataProvider="filereader")
 	public void validatePulse(String ... data) {
-		Assert.assertTrue(homePage.bpmField(data[0],data[2],data[4]),data[4]+" Pulse needs to pass but fails."); 
-		Assert.assertFalse(homePage.bpmField(data[0],data[2],"Select Pulse Range"),"Select Pulse Range"+" Pulse needs to pass but fails."); 
+		SoftAssert softAssert = new SoftAssert();
+		softAssert.assertTrue(homePage.bpmField(data[0],data[2],data[4]),data[4]+" Pulse needs to pass but fails."); 
+		softAssert.assertFalse(homePage.bpmField(data[0],data[2],"Select Pulse Range"),"Select Pulse Range"+" Pulse needs to fail but pass."); 
+		softAssert.assertAll();
 	}
 
 	  
 	@Test(priority=3,dataProvider="filereader")
 	public void validateSystolic(String ... data) {
-		Assert.assertTrue(homePage.systolicBP(data[0],data[2],data[4],data[6]),data[6]+" SystolicBP needs to pass but fails.");    	
-    	Assert.assertFalse(homePage.systolicBP(data[0],data[2],data[4],data[7]),data[7]+" SystolicBP needs to fails but pass.");
-
+		SoftAssert softAssert = new SoftAssert();
+		softAssert.assertTrue(homePage.systolicBP(data[0],data[2],data[4],data[6]),data[6]+" SystolicBP needs to pass but fails.");    	
+    	softAssert.assertFalse(homePage.systolicBP(data[0],data[2],data[4],data[7]),data[7]+" SystolicBP needs to fails but pass.");
+    	softAssert.assertAll();
 	}
 
 	@Test(priority=4,dataProvider="filereader")
 	public void validateDiastolic(String ... data) {
-		Assert.assertTrue(homePage.diastolicBP(data[0],data[2],data[4],data[6],data[8]),data[8]+" DiastolicBP needs to pass but fails.");    	
-    	Assert.assertFalse(homePage.diastolicBP(data[0],data[2],data[4],data[6],data[9]),data[9]+" DiastolicBP needs to fails but pass.");
+		SoftAssert softAssert = new SoftAssert();
+		softAssert.assertTrue(homePage.diastolicBP(data[0],data[2],data[4],data[6],data[8]),data[8]+" DiastolicBP needs to pass but fails.");    	
+    	softAssert.assertFalse(homePage.diastolicBP(data[0],data[2],data[4],data[6],data[9]),data[9]+" DiastolicBP needs to fails but pass.");
+    	softAssert.assertAll();
 	}
 	
 	@Test(priority=5)
@@ -110,21 +121,22 @@ public class TestScripts extends BaseTest{
 		}
 		else if(homePage.isResultPresent())
 		{
+			SoftAssert softAssert = new SoftAssert();
 			String actualAgeScore = homePage.getAgeScore();
 			String actualPulseScore = homePage.getPulseScore();
 			String actualBPScore = homePage.getBpScore();
 			String actualOverallScore = homePage.getOverallScore();
 			
-			Assert.assertEquals(actualAgeScore, expectedAgeScore, "Age score mismatch for age :"+age);
-			Assert.assertEquals(actualPulseScore, expectedPulseScore, "Pulse score mismatch for pulse :"+pulse);
-			Assert.assertEquals(actualBPScore, expectedBPScore, "BP score mismatch for BP values :"+systolicBP+","+diastolicBP);
-			Assert.assertEquals(actualOverallScore, exectedOverAllScore, "Overall score mismatch for inputs :"+age+","+pulse+","+systolicBP+","+diastolicBP);
+			softAssert.assertEquals(actualAgeScore, expectedAgeScore, "Age score mismatch for age :"+age);
+			softAssert.assertEquals(actualPulseScore, expectedPulseScore, "Pulse score mismatch for pulse :"+pulse);
+			softAssert.assertEquals(actualBPScore, expectedBPScore, "BP score mismatch for BP values :"+systolicBP+","+diastolicBP);
+			softAssert.assertEquals(actualOverallScore, exectedOverAllScore, "Overall score mismatch for inputs :"+age+","+pulse+","+systolicBP+","+diastolicBP);
+			softAssert.assertAll();
 		}
 		else
 		{
 			Assert.fail("Failing to provide score for inputs :"+age+","+pulse+","+systolicBP+","+diastolicBP);
 		}
-		
 	}
 	
 	@Test(priority=7)
@@ -174,7 +186,6 @@ public class TestScripts extends BaseTest{
 	    Assert.assertTrue(homePage.areFieldsCleared(), "Input fields were not cleared after reset.");
 	    System.out.println("Reset button successfully cleared all fields and hide the result.");
 	}
-
 
 
 }
